@@ -4,7 +4,7 @@ const index = () => {
     return (
         <div>
             <h1>HELLO BARNAV</h1>
-            <h2>I WANNA MAP</h2>
+            <h2>I WANdasdasdNA MAP</h2>
         </div>
     )
 }
