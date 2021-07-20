@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './SideBar/TopLogo/Logo';
+import Logo from './SideBar/index';
 
 const index = () => {
     return (
