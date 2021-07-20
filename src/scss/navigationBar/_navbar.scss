@@ -1,6 +1,7 @@
 .Navbar {
-    height: 120px;
-    background-color: $bg-color;
+    padding: 0 1.5rem;
+    background-color: $nav-color;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
