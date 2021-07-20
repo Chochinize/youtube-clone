@@ -1,12 +1,11 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import TopLogo from './Components/SideBar/index';
-
+import Logo from './Components/index';
 
 function App() {
   return (
     <div className="">
       <Router>
-     
+           <Logo />
       
       </Router>
     </div>
