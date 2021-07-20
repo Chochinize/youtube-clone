@@ -1,13 +1,13 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import NavBar from './Components/NavBar/index';
-import {AiFillAccountBook} from 'react-icons/ai'
+import TopLogo from './Components/SideBar/index';
+
+
 function App() {
   return (
     <div className="">
       <Router>
-        <AiFillAccountBook />
-        <NavBar />
-        <h1>YOUTUBdasdasE</h1>
+  
+        <TopLogo />
       
       </Router>
     </div>
