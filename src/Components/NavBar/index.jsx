@@ -1,11 +1,15 @@
 import React from 'react'
+import SearchBar from './SearchBar'
+import {IoMenu} from 'react-icons/io5'
 
 const index = () => {
     return (
         <div>
-            <h1>ADDING SOME FUNCTIONALITY</h1>
-            <h1>HELLO BARNAV</h1>
-            <h2>I WANdasdasdNA MAP</h2>
+            <div>
+            <IoMenu />
+            
+            </div>
+            <SearchBar />
         </div>
     )
 }
