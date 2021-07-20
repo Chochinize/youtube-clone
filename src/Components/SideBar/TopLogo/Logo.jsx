@@ -24,7 +24,7 @@ const Logo = () => {
 
                <h4 className='position'>
                <Home className='icons' size={20}/>
-                <a href='#' className='text'>Start</a>
+                <a href='#' className='text'>Home</a>
                </h4>
               
 
