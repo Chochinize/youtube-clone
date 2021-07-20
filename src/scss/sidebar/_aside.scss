@@ -3,6 +3,16 @@
 
 }
 .sideBar-main{
+    
+    
+    
+    font-family: roboto, sans-serif;
+
+font-weight: 900;
+
+
+
+    
     overflow-y: auto;
     height: max-content;
     width: 12em;
@@ -37,14 +47,16 @@
         }
     
         .text{
+            
             color: $text-color;
+            // font-weight: 100;
             font-size: 12px;
         }
         &:hover{
             background-color: $bg-color-hover;
             
         }
-    
+  
         
 
     }
