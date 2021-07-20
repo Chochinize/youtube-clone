@@ -4,10 +4,15 @@ import {FaBars} from 'react-icons/fa'
 import {GoThreeBars} from 'react-icons/go'
 
 function BurgerMenu() {
+    
+    const toggle = () =>{
+        console.log(123)
+    }
+
     return (
         // <IoMenu className='menu-icon' size={30} />
         <div className='menu-icon'>
-            <IoMenu size={26} />
+            <IoMenu  onClick={toggle} size={26} />
         </div>
     )
 }
