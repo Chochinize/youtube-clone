@@ -1,15 +1,22 @@
 import React from 'react'
-import SearchBar from './SearchBar'
-import {IoMenu} from 'react-icons/io5'
+import SearchBar from './SearchBar/SearchBar'
+import BurgerMenu from './BurgerMenu/BurgerMenu'
+import Logo from './Logo/Logo'
+import LoginBtn from './Buttons/LoginBtn'
+import LogoutBtn from './Buttons/LogoutBtn'
 
 const index = () => {
+
     return (
-        <div>
-            <div>
-            <IoMenu />
-            
+        <div className='Navbar'>
+            <div className='logo-menu'>
+                <BurgerMenu />
+                <Logo />
             </div>
             <SearchBar />
+            <div className='signBtn-container'>
+                <LoginBtn />
+            </div>
         </div>
     )
 }
