@@ -1,12 +1,12 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import TopLogo from './Components/SideBar/index';
+import NavigationBar from './Components/NavBar/index';
 
 
 function App() {
   return (
     <div className="">
       <Router>
-     
+        <NavigationBar />
       
       </Router>
     </div>

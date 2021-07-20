@@ -1,0 +1,13 @@
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-container{
+        width: 100%;
+
+        img {
+            max-width: 100px;
+        }
+    }
+}
