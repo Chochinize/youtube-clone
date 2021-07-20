@@ -1,5 +1,7 @@
 @import './abstracts/_abstracts-dir';
 @import './navigationBar/_navBar-dir';
+@import './sidebar/_sidebar.dir';
+@import url("https://use.typekit.net/nuo3ymp.css");
 
 * {
     margin: 0;
@@ -11,3 +13,4 @@
 :root {
     font-size: 62.5%;
 }
+

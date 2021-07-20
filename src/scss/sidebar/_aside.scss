@@ -1,0 +1,63 @@
+.icons{
+    color:  $subtext-color;
+
+}
+.sideBar-main{
+    
+    
+    
+    font-family: roboto, sans-serif;
+
+font-weight: 900;
+
+
+
+    
+    overflow-y: auto;
+    height: max-content;
+    width: 12em;
+    background-color: $bg-color;
+    
+    
+    padding-block: 7.5px;
+    padding-right: 16px;
+    
+    
+    section{
+        border-bottom: 1px solid white;
+        padding-bottom: 15px;
+     
+
+    }
+    .position{
+        
+        background-color: $bg-color ;
+        width: 12em;
+        margin: 10px;
+        margin: 0px auto;
+        padding-left: 1em;
+
+        display: flex;
+        padding-block: 0.5em;
+        gap: 2em;
+        place-items: center;
+        
+        a{
+            text-decoration: none;
+        }
+    
+        .text{
+            
+            color: $text-color;
+            // font-weight: 100;
+            font-size: 12px;
+        }
+        &:hover{
+            background-color: $bg-color-hover;
+            
+        }
+  
+        
+
+    }
+}
