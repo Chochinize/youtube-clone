@@ -5,15 +5,10 @@ import TopLogo from './Components/SideBar/index';
 
 
 function App() {
-  console.log(Router)
   return (
     <div className="">
       <Router>
-        <AiFillAccountBook />
         <NavigationBar />
-        <h1></h1>
-
-        <TopLogo />
       
       </Router>
     </div>
