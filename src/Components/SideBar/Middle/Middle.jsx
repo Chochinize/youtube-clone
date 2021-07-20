@@ -10,7 +10,7 @@ const Middle = () => {
     return (
         <div>
             <div className='sideBar-main'>
-            <section>
+            <section className='side-section'>
             <h4 className='position'>
             <Library className='icons' size={20}/>
             <a href='#' className='text'>Library</a>

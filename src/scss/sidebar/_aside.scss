@@ -1,63 +1,104 @@
-.icons{
-    color:  $subtext-color;
-
+.icons {
+    color: $subtext-color;
+    
 }
-.sideBar-main{
+
+.Scroll{
+    position: absolute;
     
     
     
-    font-family: roboto, sans-serif;
-
-font-weight: 900;
-
-
-
+    overflow: auto;
+    height: 100vh;
     
-    overflow-y: auto;
+    .aside{
+        position: relative;
+        left:  12px;
+    }
+}
+::-webkit-scrollbar {
+   background: $bg-color;
+    width:  8px;
+}
+::-webkit-scrollbar-track {
+    margin-top: 1rem;
+    
+    background: $bg-color;
+    -webkit-box-shadow: inset 0 0 200px $bg-color;
+    
+    
+}
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: $bg-color;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+}
+
+.Scroll{
+    &:hover{
+
+        ::-webkit-scrollbar-thumb {
+            background: $bg-color-active; 
+        }
+    }
+}
+
+
+
+.sideBar-main {
     height: max-content;
-    width: 12em;
+    width: 20rem;
     background-color: $bg-color;
-    
-    
-    padding-block: 7.5px;
-    padding-right: 16px;
-    
-    
-    section{
-        border-bottom: 1px solid white;
-        padding-bottom: 15px;
-     
-
-    }
-    .position{
-        
-        background-color: $bg-color ;
-        width: 12em;
-        margin: 10px;
-        margin: 0px auto;
-        padding-left: 1em;
-
-        display: flex;
-        padding-block: 0.5em;
-        gap: 2em;
-        place-items: center;
-        
-        a{
-            text-decoration: none;
+    font-family: roboto, sans-serif;
+    padding-block: 6px;
+    padding-right: 0.5rem;
+    .side-section {
+        border-top: 1px solid rgb(97, 97, 97);
+        padding-top: 1.7rem;
+        .title-sidebar {
+            padding-left: 1.5rem;
+            color: $subtext-color;
+            padding-bottom: 1rem;
+            font-size: $fs;
         }
-    
-        .text{
-            
-            color: $text-color;
-            // font-weight: 100;
-            font-size: 12px;
+        .position {
+                    
+                    background-color: $bg-color;
+                    width: 18rem;
+                    margin: 10px;
+                    margin: 0px auto;
+                    padding-left: 1.5rem;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding-block: 0.7rem;
+                    gap: 2em;
+                    place-items: center;
+                    a {
+                        text-decoration: none;
+                    }
+                    .direction {
+                        
+                        display: flex;
+                        gap: 10px;
+                        place-items: center;
+                        flex-direction: row;
+                    }
+                    .img-avatar {
+                        cursor: pointer;
+                        width: 25px;
+                        border-radius: 50%;
+                    }
+                    .text {
+                        cursor: pointer;
+                        color: $text-color;
+                        font-size: 12px;
+                    }
+                    &:hover {
+                        background-color: $bg-color-hover;
+                    }
+                }
+            }
         }
-        &:hover{
-            background-color: $bg-color-hover;
-            
-        }
-  
         
-
-    }
-}
+        

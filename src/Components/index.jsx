@@ -1,10 +1,10 @@
 import React from 'react'
-import Logo from './SideBar/index';
+import SideBar from './SideBar/index';
 
 const index = () => {
     return (
         <div>
-            <Logo />
+            <SideBar />
         </div>
     )
 }
