@@ -3,7 +3,7 @@ import {IoLogoYoutube} from 'react-icons/io';
 const Logo = () => {
     return (
         <div>
-            <IoLogoYoutube />
+           
         </div>
     )
 }

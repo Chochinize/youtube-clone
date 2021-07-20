@@ -6,8 +6,7 @@ function App() {
   return (
     <div className="">
       <Router>
-  
-        <TopLogo />
+     
       
       </Router>
     </div>
