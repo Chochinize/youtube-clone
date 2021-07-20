@@ -1,6 +1,8 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import NavigationBar from './Components/NavBar/index';
 import {AiFillAccountBook} from 'react-icons/ai'
+import TopLogo from './Components/SideBar/index';
+
 
 function App() {
   console.log(Router)
@@ -9,7 +11,9 @@ function App() {
       <Router>
         <AiFillAccountBook />
         <NavigationBar />
-        <h1>YOUTUBdasdasE</h1>
+        <h1></h1>
+
+        <TopLogo />
       
       </Router>
     </div>
