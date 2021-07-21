@@ -2,51 +2,34 @@
     color: $subtext-color;
     
 }
-
 .Scroll{
     position: absolute;
-    
-    
-    
-    overflow: auto;
+    overflow: hidden;
     height: 100vh;
-    
     .aside{
         position: relative;
         left:  12px;
     }
 }
-::-webkit-scrollbar {
+.Scroll:hover{
+overflow:auto;
+}
+::-webkit-scrollbar{
    background: $bg-color;
     width:  8px;
 }
 ::-webkit-scrollbar-track {
-    margin-top: 1rem;
-    
+    margin-top: 1rem;   
     background: $bg-color;
     -webkit-box-shadow: inset 0 0 200px $bg-color;
-    
-    
 }
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: $bg-color;
+    background: rgb(82, 82, 82);
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
 }
-
-.Scroll{
-    &:hover{
-
-        ::-webkit-scrollbar-thumb {
-            background: $bg-color-active; 
-        }
-    }
-}
-
-
-
-.sideBar-main {
+.sideBar-main {  
     height: max-content;
     width: 20rem;
     background-color: $bg-color;
@@ -56,14 +39,13 @@
     .side-section {
         border-top: 1px solid rgb(97, 97, 97);
         padding-top: 1.7rem;
-        .title-sidebar {
+        .title-sidebar {  
             padding-left: 1.5rem;
             color: $subtext-color;
             padding-bottom: 1rem;
             font-size: $fs;
         }
         .position {
-                    
                     background-color: $bg-color;
                     width: 18rem;
                     margin: 10px;
@@ -77,8 +59,7 @@
                     a {
                         text-decoration: none;
                     }
-                    .direction {
-                        
+                    .direction {   
                         display: flex;
                         gap: 10px;
                         place-items: center;
@@ -94,8 +75,24 @@
                         color: $text-color;
                         font-size: 12px;
                     }
+
+               
+
+                    .About{
+                        width: 14rem;
+
+                        color:$subtext-color;
+                        display: flex;
+                        flex-wrap: wrap;                        
+                        column-gap: 0.8rem;
+                        row-gap: 0.1rem;
+                    }
+                    .side-footer{
+                        color: $subtext-color
+                    }
+                   
                     &:hover {
-                        background-color: $bg-color-hover;
+                        background-color: $bg-color-hover;    
                     }
                 }
             }
