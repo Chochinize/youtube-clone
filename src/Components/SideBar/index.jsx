@@ -1,5 +1,5 @@
 import React from 'react'
-import Logo from './TopLogo/Logo';
+import Logo from './TopLogo/Home';
 import Middle from './Middle/Middle';
 import Abo from './Subscriptions/Subscriptions'
 import More from './More/More';
