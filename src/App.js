@@ -1,20 +1,23 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import NavigationBar from './Components/NavBar/index';
-import SideBar from './Components/index';
+import Navigation from './Components/index';
 
 
 function App() {
   return (
     <div className="">
       <Router>
-        <NavigationBar />
-        <SideBar />
+
+        <Navigation/>
+  
         <Switch>
           
 
 
 
-        </Switch>
+
+   
+        <Switch>
+  
       </Router>
     </div>
   );
