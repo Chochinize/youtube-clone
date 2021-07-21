@@ -15,7 +15,7 @@ const Logo = () => {
                <div className='sideBar-main'>
                 <section className='side-section'>
 
-               <h4 className='position no-border'>
+               <h4 className='position'>
                <Home className='icons' size={20}/>
                 <a href='#' className='text'>Home</a>
                </h4>
