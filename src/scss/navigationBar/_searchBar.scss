@@ -1,6 +1,8 @@
 .SearchBar {
-    max-width: 600px;
-    flex-basis: 40%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     form {
 
@@ -44,4 +46,7 @@
         }
     }
 
+    .voice-icon {
+        color: $subtext-color
+    }
 }

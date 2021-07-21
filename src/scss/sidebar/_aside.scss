@@ -32,7 +32,7 @@ overflow:auto;
 .sideBar-main {  
     height: max-content;
     width: 20rem;
-    background-color: $bg-color;
+    background-color: $bg-nav-color;
     padding-block: 6px;
     padding-right: 0.5rem;
     .side-section {
@@ -45,7 +45,6 @@ overflow:auto;
             font-size: $fs;
         }
         .position {
-                    background-color: $bg-color;
                     width: 18rem;
                     margin: 10px;
                     margin: 0px auto;
