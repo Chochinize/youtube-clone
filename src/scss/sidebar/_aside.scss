@@ -48,56 +48,52 @@ overflow:auto;
             font-size: $fs;
         }
         .position {
-                    width: 19rem;
-                    padding-left: 2rem;
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding-block: 0.7rem;
-                    gap: 2em;
-                    place-items: center;
-                    a {
-                        text-decoration: none;
-                    }
-                    .direction {   
-                        display: flex;
-                        gap: 10px;
-                        place-items: center;
-                        flex-direction: row;
-                    }
-                    .img-avatar {
-                        cursor: pointer;
-                        width: 25px;
-                        border-radius: 50%;
-                    }
-                    .text {
-                        cursor: pointer;
-                        color: $text-color;
-                        font-size: 12px;
-                    }
-                    
-                 
-               
-                    .About{
-                        width: 14rem;
-
-                        color:$subtext-color;
-                        display: flex;
-                        flex-wrap: wrap;                        
-                        column-gap: 0.8rem;
-                        row-gap: 0.1rem;
-                    
-                    }
-                    .side-footer{
-                        color: $subtext-color
-                    }
+            width: 19rem;
+            padding-left: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            padding-block: 0.7rem;
+            gap: 2em;
+            place-items: center;
+            a {
+                text-decoration: none;
+            }
+            .direction {   
+                display: flex;
+                gap: 10px;
+                place-items: center;
+                flex-direction: row;
+            }
+            .img-avatar {
+                cursor: pointer;
+                width: 25px;
+                border-radius: 50%;
+            }
+            .text {
+                cursor: pointer;
+                color: $text-color;
+                font-size: 12px;
+            }
+            
+            .About{
+                width: 14rem;
+                color:$subtext-color;
+                display: flex;
+                flex-wrap: wrap;                        
+                column-gap: 0.8rem;
+                row-gap: 0.1rem;
+            
+            }
+            .side-footer{
+                color: $subtext-color
+            }
                    
-                   
-                    &:hover {
-                        background-color: $bg-color-hover;    
-                    }
-                }
-                
+            &:hover {
+                background-color: $bg-color-hover;    
             }
         }
+                
+    }
+}
         
         
