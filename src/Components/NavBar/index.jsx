@@ -1,28 +1,16 @@
 import React from 'react'
+import LogoMenu from './LogoMenu/LogoMenu';
 import SearchBar from './SearchBar/SearchBar'
-import BurgerMenu from './BurgerMenu/BurgerMenu'
-import Logo from './Logo/Logo'
-import LoginBtn from './Buttons/LoginBtn'
-import LogoutBtn from './Buttons/LogoutBtn'
-import VideoIcon from './Buttons/AddVideo'
-import Apps from './Buttons/YoutubeApps'
-import Notifications from './Buttons/Notifications'
+import ButtonsSection from './Buttons/ButtonsSection';
+
 
 const index = () => {
 
     return (
         <div className='Navbar'>
-            <div className='logo-menu'>
-                <BurgerMenu />
-                <Logo />
-            </div>
+            <LogoMenu />
             <SearchBar />
-            <div className='buttons'>
-                <VideoIcon />
-                <Apps />
-                <Notifications />
-                <LoginBtn />
-            </div>
+            <ButtonsSection />
         </div>
     )
 }
