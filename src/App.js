@@ -9,6 +9,12 @@ function App() {
       <Router>
         <NavigationBar />
         <SideBar />
+        <Switch>
+          
+
+
+
+        </Switch>
       </Router>
     </div>
   );
