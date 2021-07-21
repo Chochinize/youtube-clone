@@ -6,15 +6,18 @@ function App() {
   return (
     <div className="">
       <Router>
-        <Navigation />
-        <Switch>
-          <Route>
 
-          </Route>
-          <Route>
-            
-          </Route>
-        </Switch>
+        <Navigation/>
+  
+        <Switch>
+          
+
+
+
+
+   
+        <Switch>
+  
       </Router>
     </div>
   );
