@@ -1,15 +1,10 @@
 .SearchBar {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include center;
 
     form {
 
         height: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
 
         input { 
             width: 100%;
@@ -36,17 +31,11 @@
             outline: none;
             border-top-right-radius: .25rem;
             border-bottom-right-radius: .25rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include center;
             cursor: pointer;
             &:hover {
                 color: $subtext-color;
             }
         }
-    }
-
-    .voice-icon {
-        color: $text-color;
     }
 }
