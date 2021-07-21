@@ -48,7 +48,6 @@ overflow:auto;
             font-size: $fs;
         }
         .position {
-            background-color: $bg-color;
             width: 19rem;
             padding-left: 2rem;
             display: flex;
@@ -88,7 +87,6 @@ overflow:auto;
             .side-footer{
                 color: $subtext-color
             }
-               
                    
             &:hover {
                 background-color: $bg-color-hover;    
