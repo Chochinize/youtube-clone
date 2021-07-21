@@ -5,13 +5,10 @@ import {GoThreeBars} from 'react-icons/go'
 
 function BurgerMenu() {
     
-    const toggle = () =>{
-        console.log(123)
-    }
 
     return (
         <div className='menu-icon'>
-            <IoMenu  onClick={toggle} size={26} />
+            <IoMenu   size={26} />
         </div>
     )
 }

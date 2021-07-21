@@ -1,0 +1,41 @@
+.main{
+    text-decoration: none;
+    position:relative;
+    top: 5rem;
+    width: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: $bg-color;
+    justify-items: center;
+    place-items: center;
+    padding-block: 1.5rem;
+    
+    // &:hover {
+    //     background-color: $bg-color-hover;    
+    // }
+    .text {
+        margin-block-end: .1rem ;
+       
+        letter-spacing: 0.1px;
+        cursor: pointer;
+        color: $subtext-color;
+        font-size: 10px;
+        font-weight: 10;
+    }
+    .text-special{
+        margin-block-end: -.5rem ;
+        letter-spacing: 0.1px;
+        margin-inline: -1.2rem ;
+        cursor: pointer;
+        color: $subtext-color;
+        font-size: 10px;
+        font-weight: 10
+    }
+}
+// .Height{
+//     z-index: 9999;
+//     width: max-content;
+//     height: 100vh;
+//     background: $bg-color;
+// }
