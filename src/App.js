@@ -9,14 +9,7 @@ function App() {
 
         <Navigation/>
   
-        <Switch>
-          
-
-
-
-
-   
-        <Switch>
+       
   
       </Router>
     </div>
