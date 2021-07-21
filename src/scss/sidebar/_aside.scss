@@ -19,7 +19,9 @@ overflow:auto;
     width:  8px;
 }
 ::-webkit-scrollbar-track {
-    margin-top: 1rem;   
+    margin-top: 2rem;   
+    margin-bottom: 2rem;   
+    margin: 1rem;
     background: $bg-color;
     -webkit-box-shadow: inset 0 0 200px $bg-color;
 }
@@ -30,17 +32,19 @@ overflow:auto;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
 }
 .sideBar-main {  
+    position:relative;
+    top: 4rem;
     height: max-content;
     width: 20rem;
 
     background-color: $bg-nav-color;
-    padding-block: .5rem;
+    padding-block: .6rem;
 
     padding-right: 0.7rem;
 
     .side-section {
         border-top: 1px solid rgba(90, 90, 90, 0.535);
-        padding-top: 1rem;
+        padding-top: 1.25rem;
         margin-right: .5rem;
     
         .title-sidebar {  
@@ -51,7 +55,7 @@ overflow:auto;
         }
         .position {
             width: 19rem;
-            padding-left: 2rem;
+            padding-left: 2.5rem;
             display: flex;
             flex-wrap: wrap;
             padding-block: 0.7rem;
