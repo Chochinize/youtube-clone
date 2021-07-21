@@ -10,7 +10,6 @@ function BurgerMenu() {
     }
 
     return (
-        // <IoMenu className='menu-icon' size={30} />
         <div className='menu-icon'>
             <IoMenu  onClick={toggle} size={26} />
         </div>

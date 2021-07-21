@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
-import {ImSearch} from 'react-icons/im'
+import {ImSearch as SearchIcon} from 'react-icons/im'
+import {MdKeyboardVoice as VoiceIcon} from 'react-icons/md'
 
 function SearchBar() {
     const [searchInput, setSearchInput] = useState('')
@@ -17,10 +18,10 @@ function SearchBar() {
             <form onSubmit={handleSubmit}>
                 <input type="text" name='search' value={searchInput} placeholder='Search' onChange={(e)=>handleChange(e)} />
                 <button>
-                    <ImSearch className='search-icon' size={15} />
+                    <SearchIcon className='search-icon' size={15} />
                 </button>
             </form>
-            
+            <VoiceIcon className='voice-icon icon' size={22} />
         </div>
     )
 }
