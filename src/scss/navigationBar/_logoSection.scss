@@ -2,13 +2,6 @@
     display: flex;
     align-items: center;
 
-    .menu-icon {
-        padding: .7rem;
-        color: $text-color;
-        cursor: pointer;
-        @include center;
-    }
-
     .logo-container{
         width: 100%;
         padding: 1.5rem;
