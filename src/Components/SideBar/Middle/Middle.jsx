@@ -3,13 +3,13 @@ import {BiHistory as History} from 'react-icons/bi'
 import {MdVideoLibrary as Library }from 'react-icons/md';
 import {RiVideoLine as Video} from 'react-icons/ri';
 import {MdWatchLater as Later} from 'react-icons/md'
-import {AiFillLike as Like } from 'react-icons/ai'
+import {RiThumbUpFill as Like } from 'react-icons/ri'
 import {MdKeyboardArrowDown as More} from 'react-icons/md'
 import { Link } from 'react-router-dom';
 
 const Middle = () => {
     return (
-        <div>
+        
             <div className='sideBar-main'>
             <section className='side-section'>
 
@@ -59,14 +59,14 @@ const Middle = () => {
 
             
             <h4 className='position' data-tip='Show more'  data-for='sidebar'>
-            <More className='icons' size={20}/>
+            <More className='icons' size={25}/>
             <span  className='text'>Show more</span>
             </h4>  
 
 
         </section>
             </div>
-        </div>
+
     )
 }
 

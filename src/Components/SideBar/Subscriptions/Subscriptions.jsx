@@ -7,8 +7,8 @@ const Subscriptions = () => {
 
 
 return (
-<div>
-    <h4 className='sideBar-main'>
+
+    <div className='sideBar-main'>
         <section className='side-section'>
             <h2 className='title-sidebar'>SUBSCRIPTIONS</h2>
             {data.map((item,index )=>{
@@ -30,14 +30,14 @@ return (
             }
             )}
           <h4 className='position'>
-          <More className='icons' size={20}/>
+          <More className='icons' size={25}/>
             <a  className='text'>Show 45 more</a>
             </h4> 
               
 
         </section>
-    </h4>
-</div>
+    </div>
+
 )
 }
 
