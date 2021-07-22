@@ -1,6 +1,7 @@
 import React from 'react'
 import data from './../../../data.json';
 import {MdKeyboardArrowDown as More} from 'react-icons/md'
+import { Link } from 'react-router-dom';
 const Subscriptions = () => {
 
 
@@ -10,8 +11,9 @@ return (
     <h4 className='sideBar-main'>
         <section className='side-section'>
             <h2 className='title-sidebar'>SUBSCRIPTIONS</h2>
-            {data.map(item=>{
-            return (<div className='position' >
+            {data.map((item,index )=>{
+                return (<div key={index}>
+                    <Link to={`/${item.channelName}`} className='position' >
                
 
                 <img src={`${process.env.PUBLIC_URL}/assets/avatars/${item.Avatar}`} className='img-avatar' />
@@ -20,8 +22,10 @@ return (
                    
               
                 <h4 className='text'>
+
                     {item.channelName}
                 </h4>
+                    </Link>
             </div>)
             }
             )}
