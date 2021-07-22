@@ -17,7 +17,7 @@ const index = () => {
 
         <Link to='YouTube Premium'>
         <h4 className='position' data-tip='YouTube Premium'  data-for='sidebar'>
-       <LogoIcon className='icons' size={20}/>
+       <LogoIcon className='icons' size={25}/>
         <span href='#' className='text'>YouTube Premium</span>
        </h4>
         </Link>
@@ -25,7 +25,7 @@ const index = () => {
           
       <Link to='/Movies&Shows'>
        <h4 className='position' data-tip='Movie & Shows'  data-for='sidebar'>
-       <Movies className='icons' size={20}/>
+       <Movies className='icons' size={25}/>
         <span className='text'>Movies & Shows</span>
        </h4>
       </Link>
@@ -33,7 +33,7 @@ const index = () => {
 
        <Link to='/Gaming'>
        <h4 className='position' data-tip='Gaming'  data-for='sidebar'>
-       <Gaming className='icons' size={20}/>
+       <Gaming className='icons' size={25}/>
         <span className='text'>Gaming</span>
        </h4> 
        </Link>
@@ -41,14 +41,14 @@ const index = () => {
 
         <Link to='/Live'>
        <h4 className='position' data-tip='Live'  data-for='sidebar'>
-       <Live className='icons' size={20}/>
+       <Live className='icons' size={25}/>
         <span className='text'>Live</span>
        </h4> 
         </Link>
 
         <Link to='/Learning'>
        <h4 className='position' data-tip='Learning'  data-for='sidebar'>
-       <Light className='icons' size={20}/>
+       <Light className='icons' size={25}/>
         <span className='text'>Learning</span>
        </h4> 
         </Link>
@@ -57,7 +57,7 @@ const index = () => {
 
         <Link to='/Sports'>
        <h4 className='position' data-tip='Sports'  data-for='sidebar'>
-       <Sport className='icons' size={20}/>
+       <Sport className='icons' size={25}/>
         <span className='text'>Sports</span>
        </h4> 
         </Link>

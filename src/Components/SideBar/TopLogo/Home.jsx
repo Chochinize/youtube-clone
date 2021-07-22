@@ -1,7 +1,7 @@
 import React from 'react'
-import {IoLogoYoutube as YouTubeLogo} from 'react-icons/io';
+import {MdSubscriptions as YouTubeLogo} from 'react-icons/md';
 import {IoMdHome as Home} from 'react-icons/io'
-import {FaRegCompass as Compas} from 'react-icons/fa'
+import {IoMdCompass as Compas} from 'react-icons/io'
 import { Link } from 'react-router-dom';
 
 const Logo = () => {
@@ -10,29 +10,29 @@ const Logo = () => {
       
     
  return (
-        <div>
+        
             
                <div className='sideBar-main'>
                 <section className='side-section'>
 
-                <Link to='/'>
 
+                <Link to='/'>
                <h4 className='position' data-tip='Home' data-for='sidebar'>
-               <Home className='icons' size={20}/>
+               <Home className='icons' size={23}/>
                 <span className='text'>Home</span>
                </h4>
                 </Link>
               
                 <Link to='expole'>
                <h4 className='position' data-tip='Explore'  data-for='sidebar'>
-               <Compas className='icons' size={20}/>
+               <Compas className='icons' size={23}/>
                 <span className='text'>Explore</span>
                </h4>
                 </Link>
 
                <Link to='subscriptions'>
                <h4 className='position' data-tip='Subscriptions'  data-for='sidebar'>
-               <YouTubeLogo className='icons' size={20}/>
+               <YouTubeLogo className='icons' size={23}/>
                 <span className='text'>Subscriptions</span>
                </h4>
                </Link>
@@ -44,7 +44,7 @@ const Logo = () => {
 
             </div>
 
-        </div>
+    
     )
 }
 
