@@ -22,7 +22,7 @@ function index() {
             <More />
             <MoreExtra />
             <About />
-            <ReactTooltip effect='solid'  place='bottom' backgroundColor='black' delayShow={300} arrowColor='transparent' offset="{'right':40, 'top':0}" className='tooltip'/>
+            <ReactTooltip effect='solid'  place='bottom' backgroundColor='black' delayShow={300} arrowColor='transparent' offset={{'top':10, 'left':10}} className='tooltip'/>
             
         </div>
         </aside>
