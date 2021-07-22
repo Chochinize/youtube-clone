@@ -19,7 +19,7 @@ const Middle = () => {
             <h4 className='position' data-tip='Library'  data-for='sidebar'>
 
             <Library className='icons' size={20}/>
-            <span href='#' className='text'>Library</span>
+            <span  className='text'>Library</span>
             </h4>
             </Link>
             
@@ -27,7 +27,7 @@ const Middle = () => {
             <Link to='/History'>
             <h4 className='position' data-tip='History'  data-for='sidebar'>
             <History className='icons' size={20}/>
-            <span href='#' className='text'>History</span>
+            <span  className='text'>History</span>
             </h4>    
             </Link>
 
@@ -35,22 +35,22 @@ const Middle = () => {
             <Link to="You videos">
             <h4 className='position' data-tip='Your videos'  data-for='sidebar'>
             <Video className='icons' size={20}/>
-            <span href='#' className='text'>Your videos</span>
+            <span  className='text'>Your videos</span>
             </h4>  
             </Link>
 
             <Link to='/Watch later'>
 
             <h4 className='position' data-tip='Watch later'  data-for='sidebar'>
-            <Later className='icons' size={20}/>dasdasdsadasdsadas
-            <span href='#' className='text'>Watch later</span>
+            <Later className='icons' size={20}/>
+            <span className='text'>Watch later</span>
             </h4>  
             </Link>
 
             <Link to='Liked videos'>
             <h4 className='position' data-tip='Liked videos'  data-for='sidebar'>
             <Like className='icons' size={20}/>
-            <span href='#' className='text'>Liked videos</span>
+            <span  className='text'>Liked videos</span>
             </h4>  
             </Link> 
             
@@ -60,7 +60,7 @@ const Middle = () => {
             
             <h4 className='position' data-tip='Show more'  data-for='sidebar'>
             <More className='icons' size={20}/>
-            <span href='#' className='text'>Show more</span>
+            <span  className='text'>Show more</span>
             </h4>  
 
 

@@ -31,7 +31,7 @@ return (
             )}
           <h4 className='position'>
           <More className='icons' size={20}/>
-            <a href='#' className='text'>Show 45 more</a>
+            <a  className='text'>Show 45 more</a>
             </h4> 
               
 
