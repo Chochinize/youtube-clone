@@ -17,21 +17,21 @@ const Logo = () => {
 
                 <Link to='/'>
 
-               <h4 className='position' data-tip='Home'>
+               <h4 className='position' data-tip='Home' data-for='sidebar'>
                <Home className='icons' size={20}/>
                 <span className='text'>Home</span>
                </h4>
                 </Link>
               
                 <Link to='expole'>
-               <h4 className='position' data-tip='Explore'>
+               <h4 className='position' data-tip='Explore'  data-for='sidebar'>
                <Compas className='icons' size={20}/>
                 <span className='text'>Explore</span>
                </h4>
                 </Link>
 
                <Link to='subscriptions'>
-               <h4 className='position' data-tip='Subscriptions'>
+               <h4 className='position' data-tip='Subscriptions'  data-for='sidebar'>
                <YouTubeLogo className='icons' size={20}/>
                 <span className='text'>Subscriptions</span>
                </h4>
