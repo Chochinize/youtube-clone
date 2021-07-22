@@ -14,8 +14,10 @@ const Middle = () => {
             <section className='side-section'>
 
 
+
             <Link to='/Library'>
             <h4 className='position' data-tip='Library'>
+
             <Library className='icons' size={20}/>
             <span href='#' className='text'>Library</span>
             </h4>
