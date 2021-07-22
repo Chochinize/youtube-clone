@@ -5,41 +5,62 @@ import {RiVideoLine as Video} from 'react-icons/ri';
 import {MdWatchLater as Later} from 'react-icons/md'
 import {AiFillLike as Like } from 'react-icons/ai'
 import {MdKeyboardArrowDown as More} from 'react-icons/md'
+import { Link } from 'react-router-dom';
 
 const Middle = () => {
     return (
         <div>
             <div className='sideBar-main'>
             <section className='side-section'>
-            <h4 className='position'>
-                
+
+
+
+            <Link to='/Library'>
+            <h4 className='position' data-tip='Library'>
+
             <Library className='icons' size={20}/>
-            <a href='#' className='text'>Library</a>
+            <span href='#' className='text'>Library</span>
             </h4>
+            </Link>
             
-            <h4 className='position'>
+
+            <Link to='/History'>
+            <h4 className='position' data-tip='History'>
             <History className='icons' size={20}/>
-            <a href='#' className='text'>History</a>
+            <span href='#' className='text'>History</span>
             </h4>    
+            </Link>
 
-            <h4 className='position'>
+
+            <Link to="You videos">
+            <h4 className='position' data-tip='Your videos'>
             <Video className='icons' size={20}/>
-            <a href='#' className='text'>Your videos</a>
+            <span href='#' className='text'>Your videos</span>
             </h4>  
+            </Link>
 
-            <h4 className='position'>
-            <Later className='icons' size={20}/>
-            <a href='#' className='text'>Watch later</a>
+            <Link to='/Watch later'>
+
+            <h4 className='position' data-tip='Watch later'>
+            <Later className='icons' size={20}/>dasdasdsadasdsadas
+            <span href='#' className='text'>Watch later</span>
             </h4>  
+            </Link>
 
-            <h4 className='position'>
+            <Link to='Liked videos'>
+            <h4 className='position' data-tip='Liked videos'>
             <Like className='icons' size={20}/>
-            <a href='#' className='text'>Liked videos</a>
+            <span href='#' className='text'>Liked videos</span>
             </h4>  
+            </Link> 
             
-            <h4 className='position'>
+
+
+
+            
+            <h4 className='position' data-tip='Show more'>
             <More className='icons' size={20}/>
-            <a href='#' className='text'>Show more</a>
+            <span href='#' className='text'>Show more</span>
             </h4>  
 
 
