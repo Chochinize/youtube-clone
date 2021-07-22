@@ -4,7 +4,7 @@ import SideBar from './SideBar/index';
 import SmallBar from './smallBar/index'
 
 const Index = () => {
-    const [isToggled, setIsToggled] = useState(false)
+    const [isToggled, setIsToggled] = useState(true)
 
     function handleClick() {
         setIsToggled(!isToggled)
