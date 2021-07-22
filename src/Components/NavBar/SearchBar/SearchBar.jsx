@@ -18,12 +18,12 @@ function SearchBar() {
             <form onSubmit={handleSubmit}>
                 <input type="text" name='search' value={searchInput} placeholder='Search' onChange={(e)=>handleChange(e)} autoComplete='false' />
                 <button>
-                    <SearchIcon size={15} data-tip='Search' />
+                    <SearchIcon size={15} data-tip='Search' data-for='navbar' />
                 </button>
             </form>
             {/* <VoiceBtn tooltip='Search with your voice' /> */}
             <button className='icon-container'>
-                <VoiceIcon size={25} data-tip='Search with your voice' />
+                <VoiceIcon size={25} data-tip='Search with your voice' data-for='navbar' />
             </button>
         </div>
     )
