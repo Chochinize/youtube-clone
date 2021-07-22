@@ -16,7 +16,7 @@ const Middle = () => {
 
 
             <Link to='/Library'>
-            <h4 className='position' data-tip='Library'>
+            <h4 className='position' data-tip='Library'  data-for='sidebar'>
 
             <Library className='icons' size={20}/>
             <span href='#' className='text'>Library</span>
@@ -25,7 +25,7 @@ const Middle = () => {
             
 
             <Link to='/History'>
-            <h4 className='position' data-tip='History'>
+            <h4 className='position' data-tip='History'  data-for='sidebar'>
             <History className='icons' size={20}/>
             <span href='#' className='text'>History</span>
             </h4>    
@@ -33,7 +33,7 @@ const Middle = () => {
 
 
             <Link to="You videos">
-            <h4 className='position' data-tip='Your videos'>
+            <h4 className='position' data-tip='Your videos'  data-for='sidebar'>
             <Video className='icons' size={20}/>
             <span href='#' className='text'>Your videos</span>
             </h4>  
@@ -41,14 +41,14 @@ const Middle = () => {
 
             <Link to='/Watch later'>
 
-            <h4 className='position' data-tip='Watch later'>
+            <h4 className='position' data-tip='Watch later'  data-for='sidebar'>
             <Later className='icons' size={20}/>dasdasdsadasdsadas
             <span href='#' className='text'>Watch later</span>
             </h4>  
             </Link>
 
             <Link to='Liked videos'>
-            <h4 className='position' data-tip='Liked videos'>
+            <h4 className='position' data-tip='Liked videos'  data-for='sidebar'>
             <Like className='icons' size={20}/>
             <span href='#' className='text'>Liked videos</span>
             </h4>  
@@ -58,7 +58,7 @@ const Middle = () => {
 
 
             
-            <h4 className='position' data-tip='Show more'>
+            <h4 className='position' data-tip='Show more'  data-for='sidebar'>
             <More className='icons' size={20}/>
             <span href='#' className='text'>Show more</span>
             </h4>  

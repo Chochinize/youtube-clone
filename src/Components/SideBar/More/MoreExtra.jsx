@@ -12,7 +12,7 @@ const MoreExtra = () => {
         
 
         <Link to='/Settings'>
-    <h4 className='position' data-tip='Settings'>
+    <h4 className='position' data-tip='Settings'  data-for='sidebar'>
        <Settings className='icons' size={20}/>
         <span href='#' className='text'>Settings</span>
        </h4>
@@ -20,7 +20,7 @@ const MoreExtra = () => {
       
 
       <Link to='/Report History'>
-       <h4 className='position' data-tip='Report History'>
+       <h4 className='position' data-tip='Report History'  data-for='sidebar'>
        <Flag className='icons' size={20}/>
         <span className='text'>Report History</span>
        </h4>
@@ -28,7 +28,7 @@ const MoreExtra = () => {
 
 
        <Link to='/Help'>
-       <h4 className='position' data-tip='Help'>
+       <h4 className='position' data-tip='Help'  data-for='sidebar'>
        <Help className='icons' size={20}/>
         <span className='text'>Help</span>
        </h4> 
@@ -36,7 +36,7 @@ const MoreExtra = () => {
         
 
         <Link to='/Send feedback'>
-       <h4 className='position' data-tip='Send feedback'>
+       <h4 className='position' data-tip='Send feedback'  data-for='sidebar'>
        <Feedback className='icons' size={20}/>
         <span className='text'>Send feedback</span>
        </h4>
