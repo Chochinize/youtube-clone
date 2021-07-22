@@ -3,10 +3,9 @@
     z-index: -1;
     top:7rem;
     left: 2rem;
-    padding-top: 35.25% ;
-    width: 60%;
-    // height: 20vh;
-  
+    padding-top: 37.25% ;
+    width: 65%;
+
     
     
     
@@ -16,6 +15,8 @@
         position: absolute;
         top: 0;
         left: 0px;
+      
+       
     }
 }
 
@@ -33,7 +34,18 @@
         position: relative;
         padding-inline: 1rem;
       width: 95%;
+      padding-top: 50.25% ;
       display: flex;
+      max-height: 37%;
       
+    }
+}
+@media only screen and  (min-width:1300px) {
+    .videoPage{
+        
+        position: relative;
+        margin-inline:10%;
+        
+        
     }
 }
