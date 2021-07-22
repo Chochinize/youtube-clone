@@ -1,0 +1,39 @@
+.videoPage{
+    position: relative;
+    z-index: -1;
+    top:7rem;
+    left: 2rem;
+    padding-top: 35.25% ;
+    width: 60%;
+    // height: 20vh;
+  
+    
+    
+    
+    
+    
+    .react-player{
+        position: absolute;
+        top: 0;
+        left: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 914px) {
+    .videoPage{
+        position: relative;
+        padding-inline: 1rem;
+      width: 95%;
+      display: flex;
+      
+    }
+}

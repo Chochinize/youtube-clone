@@ -1,13 +1,9 @@
 import React from 'react'
-import Video from './Watch/index';
+import Videos from './Videos/Video'
 const index = () => {
     return (
-        <div >
-
-
-            <Video />
-
-
+        <div>
+            <Videos />
         </div>
     )
 }
