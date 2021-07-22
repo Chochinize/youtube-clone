@@ -4,11 +4,12 @@ import SearchBar from './SearchBar/SearchBar'
 import ButtonsSection from './Buttons/ButtonsSection';
 
 
-const index = () => {
+const index = ({toggleSidebar}) => {
+
 
     return (
         <div className='Navbar'>
-            <LogoMenu />
+            <LogoMenu toggleSidebar={toggleSidebar} />
             <SearchBar />
             <ButtonsSection />
         </div>
