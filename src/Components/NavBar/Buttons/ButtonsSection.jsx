@@ -8,21 +8,21 @@ function ButtonsSection() {
     return (
         <div className='buttons'>
             <button className='icon-container'>
-                <VideoIcon size={25} data-tip='Create' />
+                <VideoIcon size={25} data-tip='Create' data-for='navbar' />
             </button>
 
             <button className='icon-container'>
-                <Apps size={25} data-tip='YouTube Apps' />
+                <Apps size={25} data-tip='YouTube Apps' data-for='navbar' />
             </button>
 
             <button className='icon-container'>
-                <Notification size={25} data-tip='Notifications' />
+                <Notification size={25} data-tip='Notifications' data-for='navbar' />
             </button>
 
             {/* <button>{isLogged ? 'Sign Out' : 'Sign In'}</button> */}
             <button>Sign In</button>
 
-            <ReactTooltip className='tooltip' backgroundColor='grey' effect='solid' offset="{'top': -10}" delayHide={150} arrowColor='transparent' />
+            <ReactTooltip id='navbar' backgroundColor='grey' effect='solid' offset="{'top': -10}" delayHide={150} arrowColor='transparent' />
         </div>
     )
 }
