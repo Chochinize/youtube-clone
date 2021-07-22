@@ -16,12 +16,15 @@ function SearchBar() {
     return (
         <div className='SearchBar'>
             <form onSubmit={handleSubmit}>
-                <input type="text" name='search' value={searchInput} placeholder='Search' onChange={(e)=>handleChange(e)} />
+                <input type="text" name='search' value={searchInput} placeholder='Search' onChange={(e)=>handleChange(e)} autoComplete='false' />
                 <button>
-                    <SearchIcon className='search-icon' size={15} />
+                    <SearchIcon size={15} data-tip='Search' />
                 </button>
             </form>
-            <VoiceIcon className='voice-icon icon' size={22} />
+            {/* <VoiceBtn tooltip='Search with your voice' /> */}
+            <button className='icon-container'>
+                <VoiceIcon size={25} data-tip='Search with your voice' />
+            </button>
         </div>
     )
 }

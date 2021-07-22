@@ -12,6 +12,7 @@ const Middle = () => {
             <div className='sideBar-main'>
             <section className='side-section'>
             <h4 className='position'>
+                
             <Library className='icons' size={20}/>
             <a href='#' className='text'>Library</a>
             </h4>

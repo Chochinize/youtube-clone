@@ -3,19 +3,16 @@
     align-items: center;
 
     .menu-icon {
-        padding: .8rem;
+        padding: .7rem;
         color: $text-color;
         cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include center;
     }
 
     .logo-container{
         width: 100%;
         padding: 1.5rem;
-        display: flex;
-        align-items: center;
+        @include center;
 
         img {
             width: 9rem;
