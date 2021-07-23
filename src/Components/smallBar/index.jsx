@@ -8,10 +8,10 @@ const index = () => {
     return (
         <div className='Height'>
 
-        <Shome/>
-        <Sexplorer />
-        <Slibrart />
-        <Ssubscription />
+            <Shome/>
+            <Sexplorer />
+            <Slibrart />
+            <Ssubscription />
 
 
         </div>

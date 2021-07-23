@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import NavBar from './NavBar/index'
 import SideBar from './SideBar/index';
-import SmallBar from './smallBar/index'
+import SmallBar from './smallBar/index';
 import Video from './BodyContent/index';
 
 const Index = () => {
@@ -15,7 +15,7 @@ const Index = () => {
         <>
              <NavBar toggleSidebar={handleClick} />
 
-             {isToggled ? <SideBar/> : ''}
+             {isToggled ? <SideBar/> : <SmallBar />}
              <Video />
         </>
     
