@@ -6,12 +6,7 @@ function SearchBar() {
     const [searchQuery, setSearchQuery] = useState('')
     const [videos, setVideos] = useState([])
 
-    const API_KEY = process.env.REACT_APP_API_KEY;
-
-    const API_URL = `${process.env.REACT_APP_API_URL}${searchQuery}&key=${API_KEY}`;
-
-    const API_URL = `${process.env.REACT_APP_API_URL}cattaneo&key=${API_KEY}`;
-
+  
 
     function handleChange(e){
         setSearchQuery(e.target.value);
@@ -19,27 +14,8 @@ function SearchBar() {
 
     function handleSubmit(e){
         e.preventDefault()
-        fetchData(API_URL)
     }
 
-    async function fetchData(url){
-        const res = await fetch(url)
-        const result = await res.json()
-
-        setVideos(result.item);
-        console.log(result);
-    }
-
-    
-        console.log(fetchData(API_URL));
-        
-
-        setVideos(result.items)
-    }
-
-    // useEffect(()=>{
-        
-    // }, [])
 
 
     return (

@@ -5,22 +5,38 @@ import SmallBar from './smallBar/index';
 import Video from './BodyContent/index';
 
 const Index = () => {
-    const [isToggled, setIsToggled] = useState(true)
+    
+  
 
+    const API_KEY = process.env.REACT_APP_API_KEY;
+    const VIDEO_URL = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
+    
+    
+    
+    const [isToggled, setIsToggled] = useState(true)
     function handleClick() {
         setIsToggled(!isToggled)
     }
+    
+
+
+console.log(123);
+
+
 
     return (
-        <>
+    <>
             <NavBar toggleSidebar={handleClick} />
+            {isToggled ? <SideBar/> : <SmallBar/>}
+            
+            
 
-            {isToggled ? <SideBar/> : <SmallBar />}
+
             <Video />
-        </>
     
            
   
+        </>
     )
 }
 
