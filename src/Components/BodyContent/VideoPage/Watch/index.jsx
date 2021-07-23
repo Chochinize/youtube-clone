@@ -1,9 +1,12 @@
 import React from 'react'
 import Videos from './Videos/Video'
+import Bside from './BsideBar/BsideBar'
+
 const index = () => {
     return (
-        <div>
+        <div className='bside-main'>
             <Videos />
+            <Bside/>
         </div>
     )
 }
