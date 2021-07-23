@@ -13,10 +13,10 @@ const Index = () => {
 
     return (
         <>
-             <NavBar toggleSidebar={handleClick} />
+            <NavBar toggleSidebar={handleClick} />
 
-             {isToggled ? <SideBar/> : <SmallBar />}
-             <Video />
+            {isToggled ? <SideBar/> : <SmallBar />}
+            <Video />
         </>
     
            
