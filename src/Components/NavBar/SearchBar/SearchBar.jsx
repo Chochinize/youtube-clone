@@ -6,8 +6,8 @@ function SearchBar() {
     const [searchQuery, setSearchQuery] = useState('')
     const [videos, setVideos] = useState([])
 
-    const API_URL = `${process.env.REACT_APP_API_URL}${searchQuery}&key=${API_KEY}`;
     const API_KEY = process.env.REACT_APP_API_KEY;
+    const API_URL = `${process.env.REACT_APP_API_URL}${searchQuery}&key=${API_KEY}`;
 
     function handleChange(e){
         setSearchQuery(e.target.value);
@@ -20,8 +20,13 @@ function SearchBar() {
     async function fetchData(url){
         const res = await fetch(url)
         const result = await res.json()
-        console.log(result)
+        setVideos(result.item);
+        console.log(result);
     }
+
+    
+        console.log(fetchData(API_URL));
+        
 
     return (
         <div className='SearchBar'>
