@@ -22,14 +22,17 @@
 
 .bside-main{
     display: flex;
+    z-index: -2;
     .bside-videos{
         position: relative;
+        z-index: 10213123;
         top: 7rem;
-        padding-inline: 2rem;
-        width: max-content;
+        // padding-inline: 2rem;
+        margin-inline: 2rem;
+        // width: max-content;
         height: max-content;
         border: 1px solid white;
-        
+        object-fit: cover;
     }
 }
 
@@ -48,16 +51,41 @@
     .bside-main{
         position: relative;
         display: block;
-        
     }
-    
+    .image{
+        object-fit: cover  ;
+        margin-block: 10px ;
+        
+        position: relative;
+        width: 150px;
+        
+        height: 83px;
+        display: block;
+
+    }    
+    .content-info{
+        display: flex;
+    }
         
       
     
 }
 @media only screen and  (min-width:1300px) {
     .videoPage{
+        height: 10vh;
         position: relative;
         margin-inline:10%;
     }
+    .image{
+        object-fit: cover  ;
+        margin-block: 10px ;
+        overflow: hidden;
+        position: relative;
+        width: 150px;
+        
+        height: 90px;
+        display: block;
+
+    }    
+
 }

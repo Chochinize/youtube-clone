@@ -1,9 +1,9 @@
 import React from 'react'
 import Video from './VideoPage/index'
-const index = () => {
+const index = ({datadown}) => {
     return (
         <div>
-            <Video />
+            <Video datadown={datadown}/>
         </div>
     )
 }
