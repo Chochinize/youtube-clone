@@ -3,46 +3,43 @@ import axios from 'axios'
 import {useState,useEffect} from 'react';
 import moment from 'moment'
 import { Link } from 'react-router-dom';
+import {numFormatter} from './../../../../../Functions/index'
+
+
 const BsideBar = ({datadown}) => {
    
 
-    // const [data,setData]=useState([]);
+    
 
    const API_KEY = process.env.REACT_APP_API_KEY;
    const API_URL = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
 
 
   
-   function numFormatter(num) {
-    if(num > 999 && num < 1000000){
-        return (num/1000).toFixed(1) + 'K'; // convert to K for number from > 1000 < 1 million 
-    }else if(num > 1000000){
-        return (num/1000000).toFixed(1) + 'M'; // convert to M for number from > 1 million 
-    }else if(num < 900){
-        return num; // if value < 1000, nothing to do
-    }
-}
+
 
 
    
-    console.log(datadown);
-    console.log(numFormatter(3660000));
-    
     
     const content =  datadown.map((item,idx)=>{
         const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
-        const views = parseFloat(item.statistics.viewCount).toFixed(2);
+        const views = numFormatter(item.statistics.viewCount);
         return (
-            <div   key={idx} >
-            <img src={item.snippet.thumbnails.default.url} className='image' key={idx}/>
-            <div >
-
-            <h3 className='content-info'>{item.snippet.title}</h3>
-            <h4>{item.snippet.channelTitle}</h4>
-            <Link>
-            <h4>{views} Views ·{time}</h4>
-            </Link>    
+            <div   key={idx} className='content-container'>
+        
+            
+            <img src={item.snippet.thumbnails.default.url} className='content-container-img' key={idx}/>
+        
+        
+            <div className='content-container-info'>
+            <h3 className='content-container-title'>{item.snippet.title}</h3>
+            
+            <div  className='content-container-channel'>{item.snippet.channelTitle}</div>
+            
+            <div className='content-container-views_timestamp'> {views}  views <span className='content-container-dot'>&#8226;</span> {time}</div>
             </div>
+            
+               
             
             </div>
   )
