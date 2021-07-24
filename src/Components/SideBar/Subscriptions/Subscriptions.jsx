@@ -16,12 +16,12 @@ return (
                     <Link to={`/${item.channelName}`} className='position' data-tip={`${item.channelName}`}  data-for='sidebar' >
                
 
-                <img src={`${process.env.PUBLIC_URL}/assets/avatars/${item.Avatar}`} className='img-avatar' />
+                <img src={`${process.env.PUBLIC_URL}/assets/avatars/${item.Avatar}`} className='img-avatar'  />
                 
              
                    
               
-                <h4 className='text'   >
+                <h4 className='text' >
 
                     {item.channelName}
                 </h4>
