@@ -4,8 +4,20 @@
     
 }
 .aside{
-    position: fixed;
+    display: flex;
+    
+    position: relative;
     top: 5rem;
+    .middleContent{
+        border: 1px solid royalblue;
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: max-content;
+        // padding-inline-start: 22rem;
+        margin-block: 6rem;
+        
+    }
 .Scroll{
     position: absolute;
     overflow: hidden;

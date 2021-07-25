@@ -26,13 +26,11 @@
     .bside-videos{
         position: relative;
         z-index: 10213123;
-        top: 7rem;
-        // padding-inline: 2rem;
+        top: 12rem;
         margin-inline: 2rem;
-        // width: max-content;
         height: max-content;
-        border: 1px solid white;
-        object-fit: cover;
+       
+        
     }
 }
 
@@ -62,7 +60,7 @@
         
         word-break: break-all;
         position: relative;
-        border: 1px solid blueviolet;
+        
         display: flex;
         width: 100%;
         margin-block: 2rem;
@@ -75,7 +73,7 @@
         position: absolute;
         width: 150px;
         
-        height: 83px;
+        height: 84px;
         display: block;
 
     }    
@@ -87,12 +85,17 @@
         overflow:hidden;
         text-overflow: clip ellipsis;
        max-height:  2.6em;
+           overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; 
     }
     .content-container-info{
         position: relative;
         
         
-        border: 1px solid salmon;
+       
         margin-block:1rem;
         padding-inline-start: 14rem;
         margin-inline-start: 2rem;
@@ -135,48 +138,77 @@
         position: relative;
         padding-top: 34.25% ;
         margin-inline-start:8.5%;
-    }
-    .image{
-        object-fit: cover  ;
-        margin-block: 10px ;
-        overflow: hidden;
-        position: relative;
-        width: 150px;
+        width: 85%;
         
-        height: 90px;
-        display: block;
-    }    
+    }
+   
+    // .image{
+    //     object-fit: cover  ;
+    //     margin-block: 10px ;
+    //     overflow: hidden;
+    //     position: relative;
+    //     width: 150px;
+        
+    //     height: 90px;
+    //     display: block;
+    // }    
     .content-container{
-
         margin-inline: 2rem;
         position: relative;
         display: flex;
-            
+
     }
     .content-container-img{
         object-fit: cover  ;
         margin-block: 1rem ;
-        
-        position: absolute;
+        overflow: hidden;
+        position: relative;
         width: 150px;
-        
         height: 83px;
-        display: block;
-
-    }    
+    }       
     .content-container-info{
         position: relative;
-        
-        
-        border: 1px solid salmon;
-        margin-block:1rem;
-        padding-inline-start: 14rem;
-        margin-inline-start: 2rem;
-        word-break: break-all;
-        width: max-content;
-        height: 6vh;
+
        
+       
+        margin-block:1.3rem;
         
+        margin-inline-start: 1rem;
+        word-break: break-all;
+        width: 38%;
+        // max-width: 40%;
+        max-height: 30%;
+        overflow:auto;
+        display:inline-block;
+
+        
+     
     }
+    .content-container-title{
+        
+        color: $text-color;
+        word-break: normal;
+        
+        height: 2.6em;
+        padding-block-end: .5rem ;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical; 
+    }
+    .content-container-channel{
+        color:$subtext-color;
+        font-size: $fss;
+        margin-block-start: 1rem;
+    }
+    .content-container-views_timestamp{
+     color: $subtext-color;   
+     font-size: $fss;
+    }
+        
+        
+        
+    
     
 }

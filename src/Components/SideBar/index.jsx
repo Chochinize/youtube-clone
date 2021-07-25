@@ -7,24 +7,30 @@ import MoreExtra from './More/MoreExtra';
 import About from './About/About'
 
 import ReactTooltip from 'react-tooltip';
-function index() {
+function index({videocontent,toggler}) {
+
+
+  
+// console.log(sidebarmain);
+
+
     return (
+        
+        
+        
+        
+        
         <aside className='aside'>
         <div className='Scroll'>
-           
-            
-          
             <Logo />
-           
-
             <Middle />
             <Abo />
             <More />
             <MoreExtra />
             <About />
             <ReactTooltip  effect='solid' id='sidebar' place='bottom' backgroundColor='black' delayShow={300} arrowColor='transparent' offset={{'top':10, 'right':40}} className='tooltip'/>
-            
         </div>
+            <div className='middleContent'>{videocontent}</div>
         </aside>
     )
 }

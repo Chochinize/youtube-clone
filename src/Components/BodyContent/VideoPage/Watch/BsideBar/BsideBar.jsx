@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import {useState,useEffect} from 'react';
+import {useState,useEffect,useCallback} from 'react';
 import moment from 'moment'
 import { Link } from 'react-router-dom';
 import {numFormatter} from './../../../../../Functions/index'
@@ -9,6 +9,8 @@ import {numFormatter} from './../../../../../Functions/index'
 const BsideBar = ({datadown}) => {
    
 
+
+   
    
 
    const API_KEY = process.env.REACT_APP_API_KEY;
