@@ -23,7 +23,7 @@ const Logo = () => {
                </h4>
                 </Link>
               
-                <Link to='expole'>
+                <Link to='explore'>
                <h4 className='position' data-tip='Explore'  data-for='sidebar'>
                <Compas className='icons' size={23}/>
                 <span className='text'>Explore</span>
