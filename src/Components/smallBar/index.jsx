@@ -19,7 +19,7 @@ const index = ({videocontent,toggler}) => {
 
             <div className='plus-grid'>
                 {videocontent}
-                </div>
+            </div>
 
         </div>
     )

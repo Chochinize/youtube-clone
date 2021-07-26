@@ -8,20 +8,21 @@
     
     position: relative;
     top: 5rem;
-    .middleContent{
-        border: 1px solid royalblue;
-        display: flex;
-        flex-wrap: wrap;
+    .plus-grid-side{
+        // border: 2px solid rgb(225, 213, 46);
         position: relative;
-        width: max-content;
-        // padding-inline-start: 22rem;
-        margin-block: 6rem;
+        top: 5rem;
+        width: 100%;
+        margin-inline-start: 23rem ;
+        // padding-inline-start: 25rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         
     }
 .Scroll{
-    position: absolute;
+    position: fixed;
     overflow: hidden;
-    height: 100vh;
+    height: 95vh;
         .tooltip{
             border: 1px solid white;
         }

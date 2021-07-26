@@ -6,12 +6,14 @@ import More from './More/More';
 import MoreExtra from './More/MoreExtra';
 import About from './About/About'
 
+
+
 import ReactTooltip from 'react-tooltip';
 function index({videocontent,toggler}) {
 
 
   
-// console.log(sidebarmain);
+
 
 
     return (
@@ -30,7 +32,11 @@ function index({videocontent,toggler}) {
             <About />
             <ReactTooltip  effect='solid' id='sidebar' place='bottom' backgroundColor='black' delayShow={300} arrowColor='transparent' offset={{'top':10, 'right':40}} className='tooltip'/>
         </div>
-            <div className='middleContent'>{videocontent}</div>
+            <div className='plus-grid-side'>
+                
+                {videocontent}
+                
+                </div>
         </aside>
     )
 }
