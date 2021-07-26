@@ -79,7 +79,7 @@ const Index = () => {
       return (         
       <div>
       <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
-      <h3 className='title-mainpage'>{item.snippet.title}</h3>
+      <h2 className='title-mainpage'>{item.snippet.title}</h2>
       <div class='channel-mainpage'>{item.snippet.channelTitle}</div>
       <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
       </div>         

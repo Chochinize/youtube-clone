@@ -39,19 +39,20 @@
     background: $bg-nav-color;
 }
 .plus{
-    
+
     width: 100%;
     position: absolute;
     display: flex;
-    border: 1px solid gold;
+  
     
     .plus-grid{
-        border: 2px solid rgb(225, 213, 46);
+      
+        
         position: relative;
         top: 10rem;
-        
+        padding-inline: 7rem;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
 }
