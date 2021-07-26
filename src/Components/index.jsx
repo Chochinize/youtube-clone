@@ -11,23 +11,40 @@ import moment from 'moment'
 import {numFormatter} from './../Functions/index'
 const Index = () => {
 
-    const param = useParams();
-    console.log(param);
+    
 
     
-    const [data,setData]=useState([]);
-  
+   
+    const [datavideo,setDatavideo]=useState([]);
+    const [channel,setChannel]=useState([])
+ 
+    console.log(datavideo); 
+    console.log(channel); 
+    
+    
+    
+   
 
-
-    const API_KEY = process.env.REACT_APP_API_KEY;
-    const API_URL = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
+    const API_KEY = 'AIzaSyD2r-dIzV3aBctoeIYbxwrWz3Gw4-xTrB8';
+    const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
+    const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
 
     
-    const fetch = async(url)=>{
+    const fetchData = async(url)=>{
         try{
-           await axios(url).then(data=>{
-            const newData = data.data.items;
-            setData(newData);
+           await axios(url)
+            .then(res=>{      
+                
+                
+                    
+                       
+                setChannel(res.data.items.map(id=>axios.get(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${id.snippet.channelId}&key=AIzaSyD2r-dIzV3aBctoeIYbxwrWz3Gw4-xTrB8`).then(rez=>{
+                    return rez
+                    })))
+                const searchData = res.data.items;
+                setDatavideo(searchData);
+               
+
            });
             
         } catch(err){
@@ -36,25 +53,41 @@ const Index = () => {
     }
     
     useEffect(()=>{
-        fetch(API_URL);
-    },[]);
+        fetchData(API_URL_SEARCH);
+    },[])
 
 
 
+
+//   
     
-    const mainContent = data.map(item=>{
-        const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
-        // const views = numFormatter(item.statistics.viewCount);
-        return (
-  <div>
+
+    const mainContent = datavideo.map(item=>{
+        
+
+
+
+
+
+
+
+     
+
+        
+            const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
+            // const views = numFormatter(item.statistics.viewCount);
+      return (         
+      <div>
       <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
-      <h3  >{item.snippet.title}</h3>
-      <div >{item.snippet.channelTitle}</div>
-      <div >   views <span className='content-container-dot'>&#8226;</span> {time}</div>
-  </div>         
+      <h3 className='title-mainpage'>{item.snippet.title}</h3>
+      <div class='channel-mainpage'>{item.snippet.channelTitle}</div>
+      <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
+      </div>         
+      )
+    })
   
-           
-        )})
+  
+      
     
 
     
@@ -62,12 +95,14 @@ const Index = () => {
     function handleClick() {
         setIsToggled(!isToggled)
     }
+
+
     const content = {
         videocontent:mainContent, 
         toggler:isToggled
     }
 
-console.log(content);
+
 
 
 

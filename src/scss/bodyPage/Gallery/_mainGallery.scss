@@ -18,8 +18,19 @@
     // margin-left: 3rem;
     // padding-right: 1rem ;
     margin-inline-end: 5%;
-
-    margin-block:8%;
+    // margin-block:8%;
     width: 95%;
-    // margin-inline:.73rem;
 }
+ 
+.title-mainpage{
+    color:$text-color;
+}
+.channel-mainpage{
+    color:$subtext-color;
+    font-size: $fs;
+}
+.viewsandyears-mainpage{
+    color: $subtext-color;
+    font-size: $fs;
+}
+
