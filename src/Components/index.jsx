@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react';
+import {useState,useEffect, useCallback} from 'react';
 import NavBar from './NavBar/index'
 import SideBar from './SideBar/index';
 import SmallBar from './smallBar/index';
@@ -14,10 +14,11 @@ const Index = () => {
     
 
     
-   
+    
     const [datavideo,setDatavideo]=useState([]);
     const [channel,setChannel]=useState([])
- 
+    const [isToggled, setIsToggled] = useState(true)
+    
     console.log(datavideo); 
     console.log(channel); 
     
@@ -89,18 +90,19 @@ const Index = () => {
   
       
     
-
-    
-    const [isToggled, setIsToggled] = useState(true)
-    function handleClick() {
-        setIsToggled(!isToggled)
-    }
-
-
     const content = {
         videocontent:mainContent, 
         toggler:isToggled
     }
+
+    
+    const   handleClick =  useCallback(()=>{
+
+        setIsToggled(!isToggled)
+    },[content])
+    
+
+
 
 
 
