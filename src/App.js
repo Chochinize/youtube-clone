@@ -11,61 +11,69 @@ function App() {
 
   const [videos,setVideos] = useState([])
   const [channel,setChannel] = useState([])
-  // const [dataVideos, setDataVideos] = useState({
-  //   videos: videos,
-  //   channel: channel
-  // })
-  
-  const API_KEY = 'AIzaSyBVKDqZtxkhKGXvTtN7vu8Ta-N0YbHaPeM';
-  const API_URL_SEARCH = process.env.REACT_APP_API_SEARCH;
-  const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
-  
-  async function searchVideos(input='guy j'){
-    try {
-        const res = await axios(`${API_URL_SEARCH}${input}&key=${API_KEY}`)
-        const videosArray = res.data.items
-        console.log(videosArray)
-        setVideos(videosArray)
-        console.log(videos)
-        let dataChannel = []
-        for await (let video of videosArray){
-            const res2 = await axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${video.snippet.channelId}&key=${API_KEY}`)
-            // setChannel([...channel, res2])
-            dataChannel.push(res2)
-        }
-        setChannel(dataChannel)
-        console.log(channel)
-        // for (let video of videosArray){
-        //     setChannel([...channel, await getVideoInfo(video.snippet.channelId)])
-        //     // dataChannel.push(await getVideoInfo(video.snippet.channelId))
-        // }
 
-        // setChannel(dataChannel)
-        // return searchData
+  
+  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
+  const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
+  
+  
+//   fetch function
+  async function fetchData(url){
+    try {
+        const res = await axios(url)
+        const searchData = res.data.items;
+        setVideos(searchData);
+        setChannel(searchData.map(item => {
+            const res = axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`)
+            return res
+        })) 
     } catch (error) {
-        console.log(error)
+        console.log(error);
     }
-  }
+}
+
 
   useEffect(()=>{
-    searchVideos()
-  }, [])
+    fetchData(API_URL_SEARCH)
+  },[])
 
-  // useEffect(()=>{
-  //   searchVideos()
-  // },[])
+console.log(videos)
+console.log(channel)
+
   
+//   pass  as  props  main cotent if you need to do something with  it
+  const mainContent = videos.map(item=>{
+    const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
+    // const views = numFormatter(item.statistics.viewCount);
+    return (
+<div>
+  <Link to={`${item.id.videoId}`}>
+  <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
+  </Link>
+  <h3  className='title-mainpage' >{item.snippet.title}</h3>
+  <Link to='/channel'>
+  <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
+  </Link>
+
+  <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
+</div>         
+
+
+    )})
+
+
+
+ 
 
   return (
     <div>
       <Router>
-        <Navigation/>
+        <Navigation prp={mainContent}/>
  
         <Switch>
-          <Route path='/' exact>
-            <MainGallery videos={videos} channelInfo={channel} />
-          </Route>
-          {/* <Route path='/:id' component={PassProps}/> */}
+        
+         <Route path='/:id' component={PassProps}/> 
 
           <Route path='/watch?v=:id' />
 
