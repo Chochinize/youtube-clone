@@ -20,10 +20,10 @@ const Index = () => {
     const [datavideo,setDatavideo]=useState([]);
     const [channel,setChannel]=useState([])
     const [isToggled, setIsToggled] = useState(true)
-    const [cover,setCover] = useState([]);
+    // const [cover,setCover] = useState([]);
 
 
-    console.log(cover);
+    // console.log(cover);
     console.log(datavideo); 
     console.log(channel); 
     
@@ -60,7 +60,7 @@ const Index = () => {
     
     useEffect(()=>{
         fetchData(API_URL_SEARCH);
-        setCover(mainContent)
+        // setCover(mainContent)
     },[])
 
 
@@ -88,8 +88,9 @@ const Index = () => {
       
       
 
-      
+      <Link to={`${item.id.videoId}`}>
       <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
+      </Link>
       <h2 className='title-mainpage'>{item.snippet.title}</h2>
       <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
       <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
@@ -121,7 +122,7 @@ const Index = () => {
     <>
             <div className="wrapper">
             <NavBar toggleSidebar={()=>handleClick()} />
-            {isToggled ? <SideBar   coverProps={cover}/> : <SmallBar coverProps={cover}  />}
+            {isToggled ? <SideBar   coverProps={mainContent}/> : <SmallBar coverProps={mainContent}  />}
 
             {/* <div className='smallbar'>
             {mainContent}
