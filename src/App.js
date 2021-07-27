@@ -52,9 +52,11 @@ console.log(channel)
   <Link to={`${item.id.videoId}`}>
   <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
   </Link>
-
   <h3  className='title-mainpage' >{item.snippet.title}</h3>
+  <Link to='/channel'>
   <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
+  </Link>
+
   <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
 </div>         
 
