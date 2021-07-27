@@ -1,12 +1,15 @@
 import React from 'react'
-import Video from './VideoPage/index'
-const index = ({datadown}) => {
+import MainGallery from './MainGallery/index'
+import VideoPage from './VideoPage/index'
+
+
+function Index({datadown}) {
 
     return (
-        <div>
-            <Video datadown={datadown}/>
-        </div>
+        <>
+            {/* <Video datadown={datadown}/> */}
+        </>
     )
 }
 
-export default index
+export default Index
