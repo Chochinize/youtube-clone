@@ -4,7 +4,7 @@ import Sexplorer from './smallExplorer/SmallExplorer'
 import Ssubscription from './smallSubscription/SmallLibrary'
 import Slibrart from './smallLibrary/SsmallSubscriptions';
 
-const index = ({videocontent,toggler}) => {
+const index = ({coverProps,toggler}) => {
 
     return (
         <div className={toggler ? '':'plus'}>
@@ -18,7 +18,7 @@ const index = ({videocontent,toggler}) => {
             </div>
 
             <div className='plus-grid'>
-                {videocontent}
+                {coverProps}
             </div>
 
         </div>

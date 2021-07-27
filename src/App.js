@@ -2,7 +2,7 @@ import {BrowserRouter as Router, Link, Route, Switch,useParams} from 'react-rout
 import BsideBar from './Components/BodyContent/VideoPage/Watch/BsideBar/BsideBar';
 import Explore from './Components/SideBar/TopLogo/Explore';
 import Navigation from './Components/index';
-
+import PassProps from './Components/SideBar/PassProps/PassProps';
 
 function App() {
 
@@ -10,7 +10,7 @@ function App() {
   
 
   return (
-    <div className="">
+    <div>
       <Router>
 
         <Navigation/>
@@ -19,22 +19,19 @@ function App() {
        
 
           
+  
+
+
+        <Switch>
+        <Route path='/:id' component={PassProps}/>
           
-      <ul>
-        <li>
-          <Link to='/expole' >dsadasdas</Link>
-       
-        </li>
-      </ul>
-
-
+        
 
    
-        <Switch>
               
-        </Switch>
 
   
+        </Switch>
       </Router>
     </div>
   );
