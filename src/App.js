@@ -53,7 +53,7 @@ console.log(channel)
   <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
   </Link>
   <h3  className='title-mainpage' >{item.snippet.title}</h3>
-  <Link to='/channel'>
+  <Link to={`${item}`}>
   <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
   </Link>
 
