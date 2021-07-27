@@ -4,10 +4,8 @@ import axios from 'axios'
 import BsideBar from './Components/BodyContent/VideoPage/Watch/BsideBar/BsideBar';
 import Explore from './Components/SideBar/TopLogo/Explore';
 import Navigation from './Components/index';
-import { numFormatter} from './Functions';
-import moment from 'moment';
-import MainGallery from './Components/BodyContent/MainGallery/Gallery/MainGallery';
-import Video from './Components/BodyContent/VideoPage/Watch/Videos/Video';
+import PassProps from './Components/SideBar/PassProps/PassProps';
+import MainGallery from './Components/BodyContent/MainGallery/MainGallery/MainGallery';
 
 function App() {
 
@@ -19,11 +17,8 @@ function App() {
   const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
   const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
   
- 
-
-
-
-
+  
+//   fetch function
   async function fetchData(url){
     try {
         const res = await axios(url)
@@ -46,6 +41,8 @@ function App() {
 console.log(videos)
 console.log(channel)
 
+  
+//   pass  as  props  main cotent if you need to do something with  it
   const mainContent = videos.map(item=>{
     const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
     // const views = numFormatter(item.statistics.viewCount);
@@ -67,19 +64,19 @@ console.log(channel)
 
 
 
+ 
 
   return (
     <div>
       <Router>
         <Navigation prp={mainContent}/>
-       
+ 
         <Switch>
-          
-          
-          <Route path='/:id' exact/>
+        
+         <Route path='/:id' component={PassProps}/> 
 
+          <Route path='/watch?v=:id' />
 
-          <Route path='/'/>
         </Switch>
       </Router>
     </div>

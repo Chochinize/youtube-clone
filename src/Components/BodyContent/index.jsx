@@ -1,9 +1,8 @@
 import React from 'react'
-import MainGallery from './MainGallery/index'
-import VideoPage from './VideoPage/index'
 
 
-function Index({datadown}) {
+
+function index({datadown}) {
 
     return (
         <>
@@ -12,4 +11,4 @@ function Index({datadown}) {
     )
 }
 
-export default Index
+export default index
