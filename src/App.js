@@ -15,26 +15,28 @@ function App() {
   const [channel,setChannel] = useState([])
 
   
-  const API_KEY = 'AIzaSyDdF8fnQb_RRRNwDQx3i5a2LTWrD2tQmDk';
+  const API_KEY = process.env.REACT_APP_API_KEY;
   const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
   const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
   
-   async function fetchData(url){
-        try {
-            const res = await axios(url)
-            const searchData = res.data.items;
-            setVideos(searchData);
-            setChannel(searchData.map(item => {
-                const res = axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`)
-                return res
-            })) 
-        } catch (error) {
-            console.log(error);
-        }
+ 
+
+
+
+
+  async function fetchData(url){
+    try {
+        const res = await axios(url)
+        const searchData = res.data.items;
+        setVideos(searchData);
+        setChannel(searchData.map(item => {
+            const res = axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`)
+            return res
+        })) 
+    } catch (error) {
+        console.log(error);
     }
-
-
-
+}
 
 
   useEffect(()=>{
