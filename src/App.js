@@ -4,67 +4,78 @@ import axios from 'axios'
 import BsideBar from './Components/BodyContent/VideoPage/Watch/BsideBar/BsideBar';
 import Explore from './Components/SideBar/TopLogo/Explore';
 import Navigation from './Components/index';
-import PassProps from './Components/SideBar/PassProps/PassProps';
+import { numFormatter} from './Functions';
+import moment from 'moment';
 import MainGallery from './Components/BodyContent/MainGallery/Gallery/MainGallery';
+import Video from './Components/BodyContent/VideoPage/Watch/Videos/Video';
 
 function App() {
 
   const [videos,setVideos] = useState([])
   const [channel,setChannel] = useState([])
-  const [dataVideos, setDataVideos] = useState({
-    videos: videos,
-    channel: channel
-  })
+
   
-  const API_KEY = process.env.REACT_APP_API_KEY;
-  const API_URL_SEARCH = process.env.REACT_APP_API_SEARCH;
+  const API_KEY = 'AIzaSyDdF8fnQb_RRRNwDQx3i5a2LTWrD2tQmDk';
   const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
+  const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
   
-  async function searchVideos(input=''){
-    try {
-        const res = await axios(`${API_URL_SEARCH}${input}&key=${API_KEY}`)
-        const videosArray = res.data.items
-        setVideos(videosArray)
-        let dataChannel = []
-        for (let video of videosArray){
-            const res2 = await axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${video.snippet.channelId}&key=${API_KEY}`)
-            // setChannel([...channel, res2])
-            dataChannel.push(res2)
+   async function fetchData(url){
+        try {
+            const res = await axios(url)
+            const searchData = res.data.items;
+            setVideos(searchData);
+            setChannel(searchData.map(item => {
+                const res = axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`)
+                return res
+            })) 
+        } catch (error) {
+            console.log(error);
         }
-        setChannel(dataChannel)
-
-
-        // for (let video of videosArray){
-        //     setChannel([...channel, await getVideoInfo(video.snippet.channelId)])
-        //     // dataChannel.push(await getVideoInfo(video.snippet.channelId))
-        // }
-
-        // setChannel(dataChannel)
-        // return searchData
-    } catch (error) {
-        console.log(error)
     }
-  }
+
+
+
+
 
   useEffect(()=>{
-    searchVideos()
+    fetchData(API_URL_SEARCH)
   },[])
 
-  useEffect(()=>{
-    searchVideos(searchInput)
-  },[searchInput])
+console.log(videos)
+console.log(channel)
+
+  const mainContent = videos.map(item=>{
+    const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
+    // const views = numFormatter(item.statistics.viewCount);
+    return (
+<div>
+  <Link to={`${item.id.videoId}`}>
+  <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
+  </Link>
+
+  <h3  className='title-mainpage' >{item.snippet.title}</h3>
+  <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
+  <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
+</div>         
+
+
+    )})
+
+
+
 
   return (
     <div>
       <Router>
-        <Navigation/>
- 
+        <Navigation prp={mainContent}/>
+       
         <Switch>
-          {/* <Route path='/:id' component={PassProps}/> */}
+          
+          
+          <Route path='/:id' exact/>
 
-          <Route path='/watch?v=:id' />
 
-          <Route path='/' component={()=> <MainGallery {...dataVideos} />} />
+          <Route path='/'/>
         </Switch>
       </Router>
     </div>

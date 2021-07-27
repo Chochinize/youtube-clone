@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
-const Video = () => {
+const Video = ({prp}) => {
     return (
         
         
         <div className='videoPage'>
+            <hj>WELCOME</hj>
+            
 {/*             
             <ReactPlayer
              className='react-player'

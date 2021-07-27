@@ -4,7 +4,7 @@ import Sexplorer from './smallExplorer/SmallExplorer'
 import Ssubscription from './smallSubscription/SmallLibrary'
 import Slibrart from './smallLibrary/SsmallSubscriptions';
 
-const index = ({coverProps,toggler}) => {
+const index = ({prp,toggler}) => {
 
     return (
         <div className={toggler ? '':'plus'}>
@@ -18,7 +18,7 @@ const index = ({coverProps,toggler}) => {
             </div>
 
             <div className='plus-grid'>
-                {coverProps}
+                {prp}
             </div>
 
         </div>
