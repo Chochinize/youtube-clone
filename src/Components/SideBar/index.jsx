@@ -6,13 +6,13 @@ import More from './More/More';
 import MoreExtra from './More/MoreExtra';
 import About from './About/About'
 import ReactTooltip from 'react-tooltip';
-import PassProps from './PassProps/PassProps';
 
 
 
 
 
-const index =({coverProps,toggler}) =>{
+
+const index =({prp}) =>{
 
 
 
@@ -35,7 +35,7 @@ const index =({coverProps,toggler}) =>{
             <div className='plus-grid-side'>
                 
              {/* <PassProps properties={coverProps}/> */}
-                {coverProps}
+                {prp}
               
                 </div>
         </aside>
