@@ -34,7 +34,7 @@ const index =({coverProps,toggler}) =>{
         </div>
             <div className='plus-grid-side'>
                 
-             <PassProps properties={coverProps}/>
+             {/* <PassProps properties={coverProps}/> */}
                 {coverProps}
               
                 </div>

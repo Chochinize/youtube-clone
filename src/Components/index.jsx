@@ -31,7 +31,7 @@ const Index = () => {
     
    
 
-    const API_KEY = 'AIzaSyCxSyaQezV4aG_5aFDgY7pXvYnpLqX661o';
+    const API_KEY = 'AIzaSyD5KE6poU9laMSqoQ4JisL9srV-k9O_W60';
     const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
     const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
 
@@ -59,7 +59,7 @@ const Index = () => {
     }
     
     useEffect(()=>{
-        fetchData(API_URL_VIDEO);
+        fetchData(API_URL_SEARCH);
         setCover(mainContent)
     },[])
 
@@ -88,10 +88,8 @@ const Index = () => {
       
       
 
-      <Link to={`${item.id.videoId}`}>
-      <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
-      </Link>
       
+      <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
       <h2 className='title-mainpage'>{item.snippet.title}</h2>
       <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
       <div className='viewsandyears-mainpage'>   views <span className='content-container-dot'>&#8226;</span> {time}</div>
