@@ -5,23 +5,23 @@ import Abo from './Subscriptions/Subscriptions'
 import More from './More/More';
 import MoreExtra from './More/MoreExtra';
 import About from './About/About'
-
-
-
 import ReactTooltip from 'react-tooltip';
-function index({videocontent,toggler}) {
-
-
-  
+import PassProps from './PassProps/PassProps';
 
 
 
+
+
+const index =({coverProps,toggler}) =>{
+
+
+
+
+
+
+
+ 
     return (
-        
-        
-        
-        
-        
         <aside className='aside'>
         <div className='Scroll'>
             <Logo />
@@ -34,8 +34,9 @@ function index({videocontent,toggler}) {
         </div>
             <div className='plus-grid-side'>
                 
-                {videocontent}
-                
+             <PassProps properties={coverProps}/>
+                {coverProps}
+              
                 </div>
         </aside>
     )
