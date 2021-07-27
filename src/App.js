@@ -4,16 +4,16 @@ import axios from 'axios'
 import BsideBar from './Components/BodyContent/VideoPage/Watch/BsideBar/BsideBar';
 import Explore from './Components/SideBar/TopLogo/Explore';
 import Navigation from './Components/index';
-import PassProps from './Components/SideBar/PassProps/PassProps';
-import MainGallery from './Components/BodyContent/MainGallery/MainGallery/MainGallery';
 
+import MainGallery from './Components/BodyContent/MainGallery/MainGallery/MainGallery';
+import moment from 'moment';
 function App() {
 
   const [videos,setVideos] = useState([])
   const [channel,setChannel] = useState([])
 
   
-  const API_KEY = process.env.REACT_APP_API_KEY;
+  const API_KEY = 'AIzaSyDdF8fnQb_RRRNwDQx3i5a2LTWrD2tQmDk';
   const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
   const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
   
@@ -52,7 +52,7 @@ console.log(channel)
   <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
   </Link>
   <h3  className='title-mainpage' >{item.snippet.title}</h3>
-  <Link to='/channel'>
+  <Link to={`/c/${item.snippet.channelTitle.replace(/ /g, '')}`}>
   <div className='channel-mainpage'>{item.snippet.channelTitle}</div>
   </Link>
 
@@ -69,13 +69,12 @@ console.log(channel)
   return (
     <div>
       <Router>
-        <Navigation prp={mainContent}/>
+        <Navigation prp={mainContent} />
  
         <Switch>
         
-         <Route path='/:id' component={PassProps}/> 
+         
 
-          <Route path='/watch?v=:id' />
 
         </Switch>
       </Router>

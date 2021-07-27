@@ -6,7 +6,7 @@ const Video = ({prp}) => {
         
         <div className='videoPage'>
             <hj>WELCOME</hj>
-            
+            {prp}
 {/*             
             <ReactPlayer
              className='react-player'
