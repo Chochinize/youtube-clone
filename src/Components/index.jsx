@@ -6,22 +6,16 @@ import SmallBar from './smallBar/index';
 
 
 
-
-
-const Index = ({prp}) => {
-
+const Index = () => {
     const [isToggled, setIsToggled] = useState(true)
-    
     function handleClick(){
         setIsToggled(!isToggled)
     }
-    
     return (
         <>
-            <div className="wrapper">
+            <div>
                 <NavBar toggleSidebar={handleClick} />
-                {isToggled ? <SideBar prp={prp}/> : <SmallBar  prp={prp} />}
-                
+                {isToggled ? <SideBar /> : <SmallBar   />}     
             </div>
         </>
     )

@@ -12,7 +12,7 @@ import ReactTooltip from 'react-tooltip';
 
 
 
-const index =({prp}) =>{
+const index =() =>{
 
 
 
@@ -32,12 +32,6 @@ const index =({prp}) =>{
             <About />
             <ReactTooltip  effect='solid' id='sidebar' place='bottom' backgroundColor='black' delayShow={300} arrowColor='transparent' offset={{'top':10, 'right':40}} className='tooltip'/>
         </div>
-            <div className='plus-grid-side'>
-                
-             {/* <PassProps properties={coverProps}/> */}
-                {prp}
-              
-                </div>
         </aside>
     )
 }

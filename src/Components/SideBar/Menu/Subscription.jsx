@@ -1,8 +1,6 @@
 import React from 'react'
 
-const VideoTitle = ({datadown}) => {
-
-
+const Subscriptio = () => {
     return (
         <div>
             
@@ -10,4 +8,4 @@ const VideoTitle = ({datadown}) => {
     )
 }
 
-export default VideoTitle
+export default Subscriptio

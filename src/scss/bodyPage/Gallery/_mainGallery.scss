@@ -1,6 +1,8 @@
 
 .img-render{
 
+    position: relative;
+    margin-inline-start: 1rem;
     
     margin-block-start: 4rem;
     margin-block-end: 1rem;
@@ -26,3 +28,7 @@
     font-size: $fs;
 }
 
+.test{
+    border: 1px solid red;
+    margin: 10rem;
+}

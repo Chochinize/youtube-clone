@@ -16,11 +16,6 @@ const index = ({prp,toggler}) => {
             <Slibrart />
             <Ssubscription />
             </div>
-
-            <div className='plus-grid'>
-                {prp}
-            </div>
-
         </div>
     )
 }
