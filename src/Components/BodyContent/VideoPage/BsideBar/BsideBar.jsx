@@ -1,20 +1,19 @@
 import React from 'react'
-import axios from 'axios'
-import {useState,useEffect,useCallback} from 'react';
+
+
 import moment from 'moment'
-import { Link } from 'react-router-dom';
-import {numFormatter} from './../../../../../Functions/index'
+
+import {numFormatter} from '../../../../Functions/index'
 
 
-const BsideBar = ({datadown}) => {
+const BsideBar = ({data}) => {
    
 
 
    
    
 
-   const API_KEY = process.env.REACT_APP_API_KEY;
-   const API_URL = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
+ 
 
 
   
@@ -23,9 +22,9 @@ const BsideBar = ({datadown}) => {
 
    
     
-    const content =  datadown.map((item,idx)=>{
+    const content =  data.map((item,idx)=>{
         const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
-        const views = numFormatter(item.statistics.viewCount);
+        // const views = numFormatter(item.statistics.viewCount);
         return (
             <div   key={idx} className='content-container'>
         
@@ -38,7 +37,7 @@ const BsideBar = ({datadown}) => {
             
             <div  className='content-container-channel'>{item.snippet.channelTitle}</div>
             
-            <div className='content-container-views_timestamp'> {views}  views <span className='content-container-dot'>&#8226;</span> {time}</div>
+            <div className='content-container-views_timestamp'>  views <span className='content-container-dot'>&#8226;</span> {time}</div>
             </div>
             
                

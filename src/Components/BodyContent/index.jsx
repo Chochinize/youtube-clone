@@ -2,11 +2,11 @@ import React from 'react'
 
 
 
-function index({datadown}) {
+function index() {
 
     return (
         <>
-            {/* <Video datadown={datadown}/> */}
+        
         </>
     )
 }
