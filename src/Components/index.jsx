@@ -15,7 +15,7 @@ const Index = () => {
         <>
             <div>
                 <NavBar toggleSidebar={handleClick} />
-                {isToggled ? <SideBar /> : <SmallBar   />}     
+                {isToggled ? <SideBar /> : '' }     
             </div>
         </>
     )

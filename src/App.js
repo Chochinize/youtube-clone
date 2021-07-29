@@ -35,43 +35,70 @@ function App() {
 
 
 
+  
 
 
 
 
 
 
-
-  const [videos,setVideos] = useState([])
+  const [search,setSearch] = useState([])
   const [channel,setChannel] = useState([])
-  const API_KEY = 'AIzaSyD2r-dIzV3aBctoeIYbxwrWz3Gw4-xTrB8';
-  const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}${API_KEY}`;
+  const [video,setVideo] = useState([])
+
+  const API_KEY = 'AIzaSyB_LJoqvrE-QWmFzuBPKHLFnE-PWpMPD58';
   const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
+  const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}`;
+  const API_URL_CHANNEL = `${process.env.REACT_APP_API_CHANNEL}`
+  
+  
+  
   async function fetchData(url){
+    let result1 = [];
+    let result2 = [];
+    
+    setChannel(result1);
+    setVideo(result2);
     try {
-        const res = await(await axios(url)).data.items
-        setVideos(res);
-        const nr = res.map(item =>
-        axios(`https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id=${item.snippet.channelId}&key=${API_KEY}`));
-          for await(let i  of  nr){ 
-             channel.push(i);
+      const res = await(await axios(url)).data.items
+      setSearch(res);
+          const nr =  await res.map(async (item) =>{
+            let r1 = await axios.get(`${API_URL_CHANNEL}${item.snippet.channelId}&key=${API_KEY}`);
+            let r2 = await axios.get(`${API_URL_VIDEO}${item.id.videoId}&key=${API_KEY}`);
+            const [fulfiled1,fulfiled2] = await axios.all([r1,r2]); 
+            return {fulfiled1,fulfiled2}; 
+          })
+          for await (let i of nr){
+            result1.push(i.fulfiled1);
+            result2.push(i.fulfiled2);
           }
-      } catch (error) {
-        console.log(error);
+            
+          
+        } catch (error) {
+          console.log(error);
+        }
     }
-}
+             
+              
+
+          
 
 
   useEffect(()=>{
     fetchData(API_URL_SEARCH)
   },[])
 
-console.log(videos)
+
+
+
 console.log(channel)
+console.log(video)
 
-  
 
-
+const channelvideo = {
+  channel:channel,
+  video:video
+};
 
 
   return (
@@ -82,38 +109,38 @@ console.log(channel)
         <Switch>
         <Route path='/' exact >
 
-          <MainGallery data={videos} />
+          <MainGallery data={search} />
           
         </Route>
-        <Route path={`/${':slug'}`} exact>
-          <VideoPageIndex data={videos}/>
+        <Route path={`/watch=${':id'}`} >
+          <VideoPageIndex search={search} {...channelvideo}/>
         </Route>
 
 
 
 
-       <Route path='/explore' component={Explore}/>
-       <Route path='/subscription' component={Subscription}/>
-       <Route path='/library' component={Library}/>
-       <Route path='/history' component={History}/>
-       <Route path='/yourvideos' component={Yourvideos}/>
-       <Route path='/watchlater' component={WatchLater}/>
-       <Route path='/likedvideos' component={Likedvideos}/>
-       <Route path='/youtubepremium' component={YouTubePremium}/>
-       <Route path='/moviesanndshows' component={MovieandShows}/>
-       <Route path='/gaming' component={Gaming}/>
-       <Route path='/live' component={Live}/>
-       <Route path='/learnning' component={Learning}/>
-       <Route path='/sport' component={Sport}/>
-       <Route path='/settings' component={Settings}/>
-       <Route path='/reporthistory' component={ReportHistory}/>
-       <Route path='/help' component={Help}/>
-       <Route path='/sendfeedback' component={SendFeedback}/>
+       <Route path='/explore' component={Explore} exact/>
+       <Route path='/subscription' component={Subscription}exact />
+       <Route path='/library' component={Library} exact/>
+       <Route path='/history' component={History}exact/>
+       <Route path='/yourvideos' component={Yourvideos}exact/>
+       <Route path='/watchlater' component={WatchLater} exact/>
+       <Route path='/likedvideos' component={Likedvideos}exact/>
+       <Route path='/youtubepremium' component={YouTubePremium}exact/>
+       <Route path='/moviesanndshows' component={MovieandShows}exact/>
+       <Route path='/gaming' component={Gaming}exact/>
+       <Route path='/live' component={Live}exact/>
+       <Route path='/learnning' component={Learning}exact/>
+       <Route path='/sport' component={Sport}exact/>
+       <Route path='/settings' component={Settings}exact/>
+       <Route path='/reporthistory' component={ReportHistory}exact/>
+       <Route path='/help' component={Help}exact/>
+       <Route path='/sendfeedback' component={SendFeedback}exact/>
 
          
        
 
-        <Route component={NotFound} />
+        {/* <Route component={NotFound} /> */}
         </Switch>
       </Router>
     </div>
