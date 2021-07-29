@@ -11,15 +11,16 @@ const Videoplayer = () => {
 
 
     
-        let  {slug  } = useParams();
+        let  { id  } = useParams();
         
 
 
     return (
-        <div   >
+        <div  className='video-player' >
              <ReactPlayer
+          controls={true}
           className='react-player'
-          url={`${`https://www.youtube.com/watch?v=${slug}`}`}
+          url={`${`https://www.youtube.com/watch?v=${id}`}`}
           width='100%'
           height='100%'
         />  

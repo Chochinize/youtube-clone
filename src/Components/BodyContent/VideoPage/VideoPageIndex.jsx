@@ -1,15 +1,22 @@
 import React from 'react'
 import BsideBar from './BsideBar/BsideBar'
 import Videoplayer from './Videos/Videoplayer'
+import Comments from './Comments/Commets';
+import Title from './TitleSection/Titlle';
+import Description from './DescriptionSection/Description';
 
-const VideoPageIndex = ({data}) => {
+const VideoPageIndex = ({search,...channelvideo}) => {
+
 
 
     return (
-        <div >
+        <div className='bside-main'>
 
 <Videoplayer />
-{/* <BsideBar  data={data}/>       */}
+<Title search={search} {...channelvideo}/>
+<Description  {...channelvideo}/>
+<BsideBar  data={search} {...channelvideo}/>      
+<Comments/>
 
         </div>
     )

@@ -11,7 +11,7 @@ const mainContent = data.map(item=>{
         // const views = numFormatter(item.statistics.viewCount);
         return (
            <div>  
-                <Link to={`/${item.id.videoId}`}>
+                <Link to={`/watch=${item.id.videoId}`}>
                 <img src={item.snippet.thumbnails.medium.url} className='img-render'/>
                 </Link>
                 <h3  className='title-mainpage' >{item.snippet.title}</h3>
