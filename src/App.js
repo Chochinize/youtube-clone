@@ -45,8 +45,12 @@ function App() {
   const [search,setSearch] = useState([])
   const [channel,setChannel] = useState([])
   const [video,setVideo] = useState([])
+  
 
-  const API_KEY = 'AIzaSyB_LJoqvrE-QWmFzuBPKHLFnE-PWpMPD58';
+
+
+
+  const API_KEY = process.env.REACT_APP_API_KEY;
   const API_URL_SEARCH = `${process.env.REACT_APP_API_SEARCH}${API_KEY}`;
   const API_URL_VIDEO = `${process.env.REACT_APP_API_VIDEO}`;
   const API_URL_CHANNEL = `${process.env.REACT_APP_API_CHANNEL}`
@@ -80,14 +84,21 @@ function App() {
     }
              
               
-
+console.log(search)
           
 
 
   useEffect(()=>{
     fetchData(API_URL_SEARCH)
+    
   },[])
 
+
+
+   
+   
+
+ 
 
 
 
@@ -109,7 +120,7 @@ const channelvideo = {
         <Switch>
         <Route path='/' exact >
 
-          <MainGallery data={search} />
+          <MainGallery data={search} {...channelvideo} />
           
         </Route>
         <Route path={`/watch=${':id'}`} >

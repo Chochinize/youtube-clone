@@ -3,6 +3,9 @@ import moment from 'moment'
 import {numFormatter} from '../../../../Functions/index'
 import { Link } from 'react-router-dom'
 const BsideBar = ({data}) => {
+
+
+
     const content =  data.map((item,idx)=>{
         const time = moment(item.snippet.publishedAt, "YYYYMMDD").fromNow()
         // const views = numFormatter(item.statistics.viewCount);
@@ -21,7 +24,7 @@ const BsideBar = ({data}) => {
             </Link>
 
             <div className='content-container-views_timestamp'>  views <span>&#8226;</span> {time}</div>
-            <h1>AHAHAH</h1>
+           
             </div>
 
 
@@ -31,6 +34,7 @@ const BsideBar = ({data}) => {
     return (
             <section  className='bside-videos'>              
                 {content}
+                
             </section>
     )
 }
