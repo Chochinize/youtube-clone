@@ -13,12 +13,9 @@ let arrayforHoldingPosts = [];
 
 
 const VideoPageIndex = ({search,...channelvideo}) => {
-    // console.log(length);
-    const {id} = useParams(); 
-    const describe = channelvideo.video.map(view=>view.data.items.filter(v=>v.id === id).map(v1=>v1.snippet))
+   
     
-console.log(channelvideo.video);
-  
+    
 
 
 
@@ -26,7 +23,7 @@ console.log(channelvideo.video);
         <div className='main-grid'>
          <div className='left video'><Videoplayer/>
          <div className='left title'> <Title search={search} {...channelvideo}/></div>    
-         <div className='left desc'><Description  {...channelvideo}/></div>
+         <div className='left desc'><Description search={search}  {...channelvideo}/></div>
                
         
         </div>

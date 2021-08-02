@@ -7,7 +7,7 @@
     margin-block-start: 4rem;
     margin-block-end: 1rem;
     width: 95%;
-    border: 1px solid salmon;
+    // border: 1px solid salmon;
 }
  
 .title-mainpage{
@@ -16,24 +16,96 @@
     color:$text-color;
     font-weight: bold;
     font-size: 14px;
-    border: 1px solid salmon;
+    // border: 1px solid salmon;
 }   
 .channel-mainpage{
     margin-block-start: .5rem;
-    margin-inline-start: 15%;
+    margin-inline-start: 18.4%;
     color:$subtext-color;
     font-size: $fs;
-    border: 1px solid salmon;    
+    // border: 1px solid salmon;    
 }
 .viewsandyears-mainpage{
-    border: 1px solid salmon;
-    margin-inline-start: 15%;
+    // border: 1px solid salmon;
+    margin-inline-start: 18.4%;
     color: $subtext-color;
     font-size: $fs;
 }
 
 .test{
-    border: 1px solid red;
-    margin: 10rem;
+   display: flex;
+   margin-inline-start: 1.4rem;
+   
 }
-
+.avatar{
+    cursor: pointer;
+    border-radius: 50%;
+    position:absolute;
+}
+.avatar-a{
+    cursor: pointer;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-block-start: 1rem;
+    // position:absolute;
+    margin-inline: 1.7rem;
+}
+    
+// .moreless{
+    // display: flex;
+    // flex-wrap: wrap;
+    // border: 1px solid red;
+    // padding-inline: 10rem;
+    
+    
+    .flex{
+        display: flex;
+        // border: 1px solid rgb(17, 195, 208);
+    
+        .desc-title{
+            margin-block-start: 1.9rem;
+            // margin-inline-start: 1rem;
+            font-size: 14px;
+            font-weight:bold;
+        }
+        .desc-subs{
+            color:$subtext-color;
+        }
+        h4{
+            cursor: pointer;
+            margin-block-start: 2rem;
+            // margin-top: 1rem;
+            // width: max-content;
+            border-radius: 2px;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            border: 1px solid ;
+            height: max-content;
+            background-color: #cc0000;
+            // padding-inline: 3rem;
+            padding-inline: 3rem;
+            padding-block: 1rem;
+            border: 0px solid;
+            letter-spacing: 1px;
+            font-weight: bold;
+            color: #FFFFFF;
+            font-size: 14px;
+        
+        }
+        .f{
+            width: 70%;
+            display-block: 3rem;
+            margin-block-start: 4rem;
+            display: inline-flex;
+            flex-wrap: wrap;
+            // background-color: red;
+            &:nth-child(2){
+                
+                display: block;
+            }
+        }
+    }
+    
+// }

@@ -23,7 +23,7 @@ import Settings from './Components/SideBar/Menu/Settings'
 import ReportHistory from './Components/SideBar/Menu/ReportHistory'
 import Help from './Components/SideBar/Menu/Help'
 import SendFeedback from './Components/SideBar/Menu/SendFeedback'
-
+import Userpage from './Components/BodyContent/Userpage/Userpage';
 function App() {
 
 
@@ -123,10 +123,10 @@ const channelvideo = {
           <MainGallery data={search} {...channelvideo} />
           
         </Route>
-        <Route path={`/watch=${':id'}`} >
+        <Route path={`/watch=${':id?'}/${':channel?'}`} >
           <VideoPageIndex search={search} {...channelvideo}/>
         </Route>
-
+        <Route path={`/channel/:info`} component={Userpage} {...channelvideo}/>
 
 
 
