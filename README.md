@@ -8,4 +8,3 @@
         
         1.RESPONSIVNESS
     
-**This text will be bold**
