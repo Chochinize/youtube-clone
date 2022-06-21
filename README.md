@@ -41,7 +41,7 @@
 
  
    <br />
-    <a href="https://chochinize.github.io">View Demo</a>
+    <a href="https://chochinize.github.io/youtube-clone">View Demo</a>
     ·
   
    </p>
